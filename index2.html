@@ -888,10 +888,8 @@
         // 스크롤
         var scrollableElement = document.getElementById('container');
         var selectToolbar = document.getElementById('select-toolbar');
-        var lastY;
 
         //touch
-        scrollableElement.addEventListener('touchmove', test, false);
 
         scrollableElement.addEventListener('touchstart', function (event) {
             touchstartX = event.changedTouches[0].screenX;
@@ -904,12 +902,6 @@
             handleGesure();
         }, false);
 
-        scrollableElement.addEventListener('touchcancle', function (event) {
-            touchendX = event.changedTouches[0].screenX;
-            touchendY = event.changedTouches[0].screenY;
-            handleGesure();
-        }, false);
-
         function handleGesure() {
             if (touchendY < touchstartY) {
                 selectToolbar.classList.add("hidden")
@@ -917,16 +909,6 @@
             if (touchendY > touchstartY) {
                 selectToolbar.classList.remove("hidden")
             }
-        }
-
-        function test(e) {
-            var currentY = e.changedTouches[0].clientY;
-            if (currentY > lastY) {
-                selectToolbar.classList.add("hidden")
-            } else if (currentY < lastY) {
-                selectToolbar.classList.remove("hidden")
-            }
-            lastY = currentY;
         }
 
         //whell
