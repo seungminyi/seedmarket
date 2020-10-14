@@ -947,6 +947,12 @@
             handleGesure();
         }, false);
 
+        scrollableElement.addEventListener('touchcancle', function (event) {
+            touchendX = event.changedTouches[0].screenX;
+            touchendY = event.changedTouches[0].screenY;
+            handleGesure();
+        }, false);
+
         function handleGesure() {
             if (touchendY < touchstartY) {
                 selectToolbar.classList.add("hidden")
