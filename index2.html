@@ -893,19 +893,22 @@
         //touch
         scrollableElement.addEventListener('touchmove', test, false);
 
-        // scrollableElement.addEventListener('touchend touchcancel', function (event) {
-        //     alert('end')
-        //     touchendX = event.changedTouches[0].screenX;
-        //     touchendY = event.changedTouches[0].screenY;
-        //     handleGesure();
-        // }, false);
+        scrollableElement.addEventListener('touchstart', function (event) {
+            touchstartX = event.changedTouches[0].screenX;
+            touchstartY = event.changedTouches[0].screenY;
+        }, false);
 
-        // scrollableElement.addEventListener('touchcancle', function (event) {
-        //     alert('cancle')
-        //     touchendX = event.changedTouches[0].screenX;
-        //     touchendY = event.changedTouches[0].screenY;
-        //     handleGesure();
-        // }, false);
+        scrollableElement.addEventListener('touchend', function (event) {
+            touchendX = event.changedTouches[0].screenX;
+            touchendY = event.changedTouches[0].screenY;
+            handleGesure();
+        }, false);
+
+        scrollableElement.addEventListener('touchcancle', function (event) {
+            touchendX = event.changedTouches[0].screenX;
+            touchendY = event.changedTouches[0].screenY;
+            handleGesure();
+        }, false);
 
         function handleGesure() {
             if (touchendY < touchstartY) {
