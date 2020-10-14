@@ -1264,12 +1264,14 @@
         }, false);
 
         scrollableElement.addEventListener('touchend', function (event) {
+            alert('end')
             touchendX = event.changedTouches[0].screenX;
             touchendY = event.changedTouches[0].screenY;
             handleGesure();
         }, false);
 
         scrollableElement.addEventListener('touchcancle', function (event) {
+            alert('cancle')
             touchendX = event.changedTouches[0].screenX;
             touchendY = event.changedTouches[0].screenY;
             handleGesure();
