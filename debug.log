@@ -1,2 +1,25 @@
 [1014/104800.611:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\LeeSeungMin\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\12e98d30-dceb-436b-93e1-f28bbc3df7c9: 지정된 경로를 찾을 수 없습니다. (0x3)
 [1014/104800.611:ERROR:directory_reader_win.cc(43)] FindFirstFile: 지정된 경로를 찾을 수 없습니다. (0x3)
+[1014/162529.373:WARNING:process_reader_win.cc(156)] Thread 23044 should be suspended, but previous_suspend_count is 0
+[1014/162529.373:WARNING:process_reader_win.cc(156)] Thread 8860 should be suspended, but previous_suspend_count is 0
+[1014/162529.374:WARNING:process_reader_win.cc(156)] Thread 26044 should be suspended, but previous_suspend_count is 0
+[1014/162529.374:WARNING:process_reader_win.cc(156)] Thread 5768 should be suspended, but previous_suspend_count is 0
+[1014/162529.387:WARNING:process_reader_win.cc(156)] Thread 21508 should be suspended, but previous_suspend_count is 0
+[1014/162529.387:WARNING:process_reader_win.cc(156)] Thread 13092 should be suspended, but previous_suspend_count is 0
+[1014/162529.387:WARNING:process_reader_win.cc(156)] Thread 21332 should be suspended, but previous_suspend_count is 0
+[1014/162529.387:WARNING:process_reader_win.cc(156)] Thread 2800 should be suspended, but previous_suspend_count is 0
+[1014/162529.388:WARNING:process_reader_win.cc(156)] Thread 25912 should be suspended, but previous_suspend_count is 0
+[1014/162529.388:WARNING:process_reader_win.cc(156)] Thread 17380 should be suspended, but previous_suspend_count is 0
+[1014/162529.388:WARNING:process_reader_win.cc(156)] Thread 9672 should be suspended, but previous_suspend_count is 0
+[1014/162529.388:WARNING:process_reader_win.cc(156)] Thread 14044 should be suspended, but previous_suspend_count is 0
+[1014/162529.388:WARNING:process_reader_win.cc(156)] Thread 256 should be suspended, but previous_suspend_count is 0
+[1014/162529.388:WARNING:process_reader_win.cc(156)] Thread 22000 should be suspended, but previous_suspend_count is 0
+[1014/162529.388:WARNING:process_reader_win.cc(156)] Thread 24260 should be suspended, but previous_suspend_count is 0
+[1014/162529.388:WARNING:process_reader_win.cc(156)] Thread 22264 should be suspended, but previous_suspend_count is 0
+[1014/162529.388:WARNING:process_reader_win.cc(156)] Thread 15832 should be suspended, but previous_suspend_count is 0
+[1014/162529.389:WARNING:process_reader_win.cc(156)] Thread 20368 should be suspended, but previous_suspend_count is 0
+[1014/162529.389:WARNING:process_reader_win.cc(156)] Thread 21016 should be suspended, but previous_suspend_count is 0
+[1014/162529.389:WARNING:process_reader_win.cc(156)] Thread 22976 should be suspended, but previous_suspend_count is 0
+[1014/162529.389:WARNING:process_reader_win.cc(156)] Thread 14476 should be suspended, but previous_suspend_count is 0
+[1014/162529.389:WARNING:process_reader_win.cc(156)] Thread 8052 should be suspended, but previous_suspend_count is 0
+[1014/162529.389:WARNING:process_reader_win.cc(156)] Thread 22252 should be suspended, but previous_suspend_count is 0
