@@ -1,0 +1,2 @@
+[1014/104800.611:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\LeeSeungMin\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\12e98d30-dceb-436b-93e1-f28bbc3df7c9: 지정된 경로를 찾을 수 없습니다. (0x3)
+[1014/104800.611:ERROR:directory_reader_win.cc(43)] FindFirstFile: 지정된 경로를 찾을 수 없습니다. (0x3)

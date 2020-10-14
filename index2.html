@@ -1,70 +1,81 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="output.css">
     <title>Document</title>
+    <script>
+        document.documentElement.addEventListener('touchend', function (event) {
+     var now = (new Date()).getTime();
+     if (now - lastTouchEnd <= 300) {
+          event.preventDefault(); 
+        } lastTouchEnd = now; 
+    }, false);
+    </script>
     <style>
         .animated {
-			-webkit-animation-duration: 1s;
-			animation-duration: 1s;
-			-webkit-animation-fill-mode: both;
-			animation-fill-mode: both;
-		}
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
 
-		.animated.faster {
-			-webkit-animation-duration: 500ms;
-			animation-duration: 500ms;
-		}
+        .animated.faster {
+            -webkit-animation-duration: 500ms;
+            animation-duration: 500ms;
+        }
 
-		.fadeIn {
-			-webkit-animation-name: fadeIn;
-			animation-name: fadeIn;
-		}
+        .fadeIn {
+            -webkit-animation-name: fadeIn;
+            animation-name: fadeIn;
+        }
 
-		.fadeOut {
-			-webkit-animation-name: fadeOut;
-			animation-name: fadeOut;
-		}
+        .fadeOut {
+            -webkit-animation-name: fadeOut;
+            animation-name: fadeOut;
+        }
 
-		@keyframes fadeIn {
-			from {
-				opacity: 0;
-			}
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
 
-			to {
-				opacity: 1;
-			}
-		}
+            to {
+                opacity: 1;
+            }
+        }
 
-		@keyframes fadeOut {
-			from {
-				opacity: 1;
-			}
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
 
-			to {
-				opacity: 0;
-			}
-		}
+            to {
+                opacity: 0;
+            }
+        }
     </style>
 </head>
-<body>
-    <header class="flex bg-white shadow w-full h-16 px-5 py-4 justify-between" style="position: fixed;">
+
+<body class="">
+    <header class="flex bg-white shadow w-full h-16 px-5 py-4  mt-0 fixed top-0 justify-between">
         <div class="flex align-middle justify-center h-8 w-8">
             <img src="img/menu.png" alt="">
         </div>
         <div class="h-8">
             <img src="img/CMLogo.png" alt="" class="h-full">
         </div>
-        <div class="flex align-middle justify-center h-8 w-8">
+        <div class="flex float-right h-8 w-16">
             <img src="img/search.png" alt="" class="h-full">
             <img src="img/cart.png" class="h-full" alt="">
         </div>
     </header>
 
-    <div class="flex flex-row flex-wrap mx-auto">
+    <div class="flex flex-row flex-wrap mx-auto mt-16">
+        <!-- card -->
         <div class="flex flex-col justify-c transition-all duration-150 p-3 w-1/2 shadow-md sm:w-1/2 md:w-1/2 lg:w-1/4 hover:shadow-2xl">
             <div class="align-middle flex-shrink-0">
                 <img src="img/shose1.jpg" alt="">
@@ -75,667 +86,601 @@
                     <h3 class="text-xl font-bold">1191A212-100</h3>
                     <p class="text-gray-500 text-xs">AC_1191A212100_COURT S M_10</p>
                 </div>
-                <div>
-                    
+                <div class="mt-2 leading-3" style="font-size: 0px;">
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">220</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">225</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">230</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">235</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">240</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">245</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">250</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">255</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">260</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">265</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">270</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">275</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">280</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">285</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">290</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">295</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">300</span>
                 </div>
-                <div class="mt-1" style="font-size: 0px;">
-                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">220</span>
-                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">225</span>
-                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">230</span>
-                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">235</span>
-                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">240</span>
-                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">245</span>
-                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">250</span>
-                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">255</span>
-                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">260</span>
-                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">265</span>
-                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">270</span>
-                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">275</span>
-                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">280</span>
-                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">285</span>
-                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">290</span>
-                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">295</span>
-                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">300</span>
-                </div>
-                <div>
-                        <span class="block text-xs text-gray-500">출고예정 - <span>8월4째주안</span></span>
-                        <span class="block text-xs text-gray-500">오더마감 - <span>2020.08.15 오전</span></span>
-                        <span class="block text-xs text-gray-500">정가 - \100,000</span>
-                        <span class="block text-xs text-gray-500">공급률 - 50%</span>
-                        <span class="block text-xs font-bold">공급가 \50,000</span>
+                <div class="mt-2">
+                    <span class="block text-xs text-gray-500 mt-1">출고예정 - <span>8월4째주안</span></span>
+                    <span class="block text-xs text-gray-500 mt-1">오더마감 - <span>2020.08.15 오전</span></span>
+                    <span class="block text-xs text-gray-500 mt-1">정가 \100,000</span>
+                    <span class="block text-xs text-gray-500 mt-1">공급률 50%</span>
+                    <span class="block text-xs font-bold mt-1">공급가 \50,000</span>
                 </div>
                 <div class="flex justify-between mt-3">
-                    <button class="bg-yellow-500 text-white rounded-md px-1 text-xs" onclick="location.href='https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=1191A212-100&pagingIndex=1&pagingSize=40&productSet=total&query=1191A212-100&sort=price_asc&timestamp=&viewType=list'">최저가확인</button>
-                    <button class="bg-yellow-500 text-white rounded-md px-1 text-xs" onclick="openModal()">주문하기</button>
+                    <button class="bg-yellow-500 text-white rounded-md p-1 text-xs"
+                        onclick="location.href='https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=1191A212-100&pagingIndex=1&pagingSize=40&productSet=total&query=1191A212-100&sort=price_asc&timestamp=&viewType=list'">최저가확인</button>
+                    <button class="bg-yellow-500 text-white rounded-md p-1 text-xs" onclick="openModal()">주문하기</button>
                 </div>
             </div>
+        </div>
+        <!-- end card -->
+        <!-- card -->
+        <div class="flex flex-col justify-c transition-all duration-150 p-3 w-1/2 shadow-md sm:w-1/2 md:w-1/2 lg:w-1/4 hover:shadow-2xl">
+            <div class="align-middle flex-shrink-0">
+                <img src="img/shose1.jpg" alt="">
             </div>
-            <div class="flex flex-col justify-c transition-all duration-150 p-3 w-1/2 shadow-md sm:w-1/2 md:w-1/2 lg:w-1/4 hover:shadow-2xl">
-                <div class="align-middle flex-shrink-0">
-                    <img src="img/shose1.jpg" alt="">
+
+            <div class="mt-5">
+                <div>
+                    <h3 class="text-xl font-bold">1191A212-100</h3>
+                    <p class="text-gray-500 text-xs">AC_1191A212100_COURT S M_10</p>
                 </div>
-    
-                <div class="mt-5">
-                    <div>
-                        <h3 class="text-xl font-bold">1191A212-100</h3>
-                        <p class="text-gray-500 text-xs">AC_1191A212100_COURT S M_10</p>
-                    </div>
-                    <div>
-                        
-                    </div>
-                    <div class="mt-1" style="font-size: 0px;">
-                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">220</span>
-                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">225</span>
-                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">230</span>
-                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">235</span>
-                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">240</span>
-                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">245</span>
-                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">250</span>
-                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">255</span>
-                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">260</span>
-                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">265</span>
-                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">270</span>
-                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">275</span>
-                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">280</span>
-                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">285</span>
-                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">290</span>
-                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">295</span>
-                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">300</span>
-                    </div>
-                    <div>
-                            <span class="block text-xs text-gray-500">출고예정 - <span>8월4째주안</span></span>
-                            <span class="block text-xs text-gray-500">오더마감 - <span>2020.08.15 오전</span></span>
-                            <span class="block text-xs text-gray-500">정가 - \100,000</span>
-                            <span class="block text-xs text-gray-500">공급률 - 50%</span>
-                            <span class="block text-xs font-bold">공급가 \50,000</span>
-                    </div>
-                    <div class="flex justify-between mt-3">
-                        <button class="bg-yellow-500 text-white rounded-md px-1 text-xs" onclick="location.href='https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=1191A212-100&pagingIndex=1&pagingSize=40&productSet=total&query=1191A212-100&sort=price_asc&timestamp=&viewType=list'">최저가확인</button>
-                        <button class="bg-yellow-500 text-white rounded-md px-1 text-xs" onclick="openModal()">주문하기</button>
-                    </div>
+                <div class="mt-2 leading-3" style="font-size: 0px;">
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">220</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">225</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">230</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">235</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">240</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">245</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">250</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">255</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">260</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">265</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">270</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">275</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">280</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">285</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">290</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">295</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">300</span>
                 </div>
+                <div class="mt-2">
+                    <span class="block text-xs text-gray-500 mt-1">출고예정 - <span>8월4째주안</span></span>
+                    <span class="block text-xs text-gray-500 mt-1">오더마감 - <span>2020.08.15 오전</span></span>
+                    <span class="block text-xs text-gray-500 mt-1">정가 \100,000</span>
+                    <span class="block text-xs text-gray-500 mt-1">공급률 50%</span>
+                    <span class="block text-xs font-bold mt-1">공급가 \50,000</span>
                 </div>
-                <div class="flex flex-col justify-c transition-all duration-150 p-3 w-1/2 shadow-md sm:w-1/2 md:w-1/2 lg:w-1/4 hover:shadow-2xl">
-                    <div class="align-middle flex-shrink-0">
-                        <img src="img/shose1.jpg" alt="">
-                    </div>
-        
-                    <div class="mt-5">
-                        <div>
-                            <h3 class="text-xl font-bold">1191A212-100</h3>
-                            <p class="text-gray-500 text-xs">AC_1191A212100_COURT S M_10</p>
-                        </div>
-                        <div>
-                            
-                        </div>
-                        <div class="mt-1" style="font-size: 0px;">
-                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">220</span>
-                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">225</span>
-                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">230</span>
-                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">235</span>
-                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">240</span>
-                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">245</span>
-                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">250</span>
-                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">255</span>
-                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">260</span>
-                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">265</span>
-                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">270</span>
-                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">275</span>
-                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">280</span>
-                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">285</span>
-                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">290</span>
-                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">295</span>
-                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">300</span>
-                        </div>
-                        <div>
-                                <span class="block text-xs text-gray-500">출고예정 - <span>8월4째주안</span></span>
-                                <span class="block text-xs text-gray-500">오더마감 - <span>2020.08.15 오전</span></span>
-                                <span class="block text-xs text-gray-500">정가 - \100,000</span>
-                                <span class="block text-xs text-gray-500">공급률 - 50%</span>
-                                <span class="block text-xs font-bold">공급가 \50,000</span>
-                        </div>
-                        <div class="flex justify-between mt-3">
-                            <button class="bg-yellow-500 text-white rounded-md px-1 text-xs" onclick="location.href='https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=1191A212-100&pagingIndex=1&pagingSize=40&productSet=total&query=1191A212-100&sort=price_asc&timestamp=&viewType=list'">최저가확인</button>
-                            <button class="bg-yellow-500 text-white rounded-md px-1 text-xs" onclick="openModal()">주문하기</button>
-                        </div>
-                    </div>
-                    </div>
-                    <div class="flex flex-col justify-c transition-all duration-150 p-3 w-1/2 shadow-md sm:w-1/2 md:w-1/2 lg:w-1/4 hover:shadow-2xl">
-                        <div class="align-middle flex-shrink-0">
-                            <img src="img/shose1.jpg" alt="">
-                        </div>
-            
-                        <div class="mt-5">
-                            <div>
-                                <h3 class="text-xl font-bold">1191A212-100</h3>
-                                <p class="text-gray-500 text-xs">AC_1191A212100_COURT S M_10</p>
-                            </div>
-                            <div>
-                                
-                            </div>
-                            <div class="mt-1" style="font-size: 0px;">
-                                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">220</span>
-                                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">225</span>
-                                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">230</span>
-                                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">235</span>
-                                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">240</span>
-                                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">245</span>
-                                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">250</span>
-                                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">255</span>
-                                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">260</span>
-                                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">265</span>
-                                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">270</span>
-                                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">275</span>
-                                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">280</span>
-                                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">285</span>
-                                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">290</span>
-                                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">295</span>
-                                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">300</span>
-                            </div>
-                            <div>
-                                    <span class="block text-xs text-gray-500">출고예정 - <span>8월4째주안</span></span>
-                                    <span class="block text-xs text-gray-500">오더마감 - <span>2020.08.15 오전</span></span>
-                                    <span class="block text-xs text-gray-500">정가 - \100,000</span>
-                                    <span class="block text-xs text-gray-500">공급률 - 50%</span>
-                                    <span class="block text-xs font-bold">공급가 \50,000</span>
-                            </div>
-                            <div class="flex justify-between mt-3">
-                                <button class="bg-yellow-500 text-white rounded-md px-1 text-xs" onclick="location.href='https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=1191A212-100&pagingIndex=1&pagingSize=40&productSet=total&query=1191A212-100&sort=price_asc&timestamp=&viewType=list'">최저가확인</button>
-                                <button class="bg-yellow-500 text-white rounded-md px-1 text-xs" onclick="openModal()">주문하기</button>
-                            </div>
-                        </div>
-                        </div>
-                        <div class="flex flex-col justify-c transition-all duration-150 p-3 w-1/2 shadow-md sm:w-1/2 md:w-1/2 lg:w-1/4 hover:shadow-2xl">
-                            <div class="align-middle flex-shrink-0">
-                                <img src="img/shose1.jpg" alt="">
-                            </div>
-                
-                            <div class="mt-5">
-                                <div>
-                                    <h3 class="text-xl font-bold">1191A212-100</h3>
-                                    <p class="text-gray-500 text-xs">AC_1191A212100_COURT S M_10</p>
-                                </div>
-                                <div>
-                                    
-                                </div>
-                                <div class="mt-1" style="font-size: 0px;">
-                                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">220</span>
-                                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">225</span>
-                                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">230</span>
-                                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">235</span>
-                                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">240</span>
-                                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">245</span>
-                                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">250</span>
-                                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">255</span>
-                                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">260</span>
-                                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">265</span>
-                                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">270</span>
-                                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">275</span>
-                                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">280</span>
-                                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">285</span>
-                                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">290</span>
-                                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">295</span>
-                                        <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">300</span>
-                                </div>
-                                <div>
-                                        <span class="block text-xs text-gray-500">출고예정 - <span>8월4째주안</span></span>
-                                        <span class="block text-xs text-gray-500">오더마감 - <span>2020.08.15 오전</span></span>
-                                        <span class="block text-xs text-gray-500">정가 - \100,000</span>
-                                        <span class="block text-xs text-gray-500">공급률 - 50%</span>
-                                        <span class="block text-xs font-bold">공급가 \50,000</span>
-                                </div>
-                                <div class="flex justify-between mt-3">
-                                    <button class="bg-yellow-500 text-white rounded-md px-1 text-xs" onclick="location.href='https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=1191A212-100&pagingIndex=1&pagingSize=40&productSet=total&query=1191A212-100&sort=price_asc&timestamp=&viewType=list'">최저가확인</button>
-                                    <button class="bg-yellow-500 text-white rounded-md px-1 text-xs" onclick="openModal()">주문하기</button>
-                                </div>
-                            </div>
-                            </div>
-                            <div class="flex flex-col justify-c transition-all duration-150 p-3 w-1/2 shadow-md sm:w-1/2 md:w-1/2 lg:w-1/4 hover:shadow-2xl">
-                                <div class="align-middle flex-shrink-0">
-                                    <img src="img/shose1.jpg" alt="">
-                                </div>
-                    
-                                <div class="mt-5">
-                                    <div>
-                                        <h3 class="text-xl font-bold">1191A212-100</h3>
-                                        <p class="text-gray-500 text-xs">AC_1191A212100_COURT S M_10</p>
-                                    </div>
-                                    <div>
-                                        
-                                    </div>
-                                    <div class="mt-1" style="font-size: 0px;">
-                                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">220</span>
-                                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">225</span>
-                                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">230</span>
-                                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">235</span>
-                                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">240</span>
-                                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">245</span>
-                                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">250</span>
-                                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">255</span>
-                                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">260</span>
-                                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">265</span>
-                                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">270</span>
-                                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">275</span>
-                                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">280</span>
-                                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">285</span>
-                                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">290</span>
-                                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">295</span>
-                                            <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">300</span>
-                                    </div>
-                                    <div>
-                                            <span class="block text-xs text-gray-500">출고예정 - <span>8월4째주안</span></span>
-                                            <span class="block text-xs text-gray-500">오더마감 - <span>2020.08.15 오전</span></span>
-                                            <span class="block text-xs text-gray-500">정가 - \100,000</span>
-                                            <span class="block text-xs text-gray-500">공급률 - 50%</span>
-                                            <span class="block text-xs font-bold">공급가 \50,000</span>
-                                    </div>
-                                    <div class="flex justify-between mt-3">
-                                        <button class="bg-yellow-500 text-white rounded-md px-1 text-xs" onclick="location.href='https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=1191A212-100&pagingIndex=1&pagingSize=40&productSet=total&query=1191A212-100&sort=price_asc&timestamp=&viewType=list'">최저가확인</button>
-                                        <button class="bg-yellow-500 text-white rounded-md px-1 text-xs" onclick="openModal()">주문하기</button>
-                                    </div>
-                                </div>
-                                </div>
-                                <div class="flex flex-col justify-c transition-all duration-150 p-3 w-1/2 shadow-md sm:w-1/2 md:w-1/2 lg:w-1/4 hover:shadow-2xl">
-                                    <div class="align-middle flex-shrink-0">
-                                        <img src="img/shose1.jpg" alt="">
-                                    </div>
-                        
-                                    <div class="mt-5">
-                                        <div>
-                                            <h3 class="text-xl font-bold">1191A212-100</h3>
-                                            <p class="text-gray-500 text-xs">AC_1191A212100_COURT S M_10</p>
-                                        </div>
-                                        <div>
-                                            
-                                        </div>
-                                        <div class="mt-1" style="font-size: 0px;">
-                                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">220</span>
-                                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">225</span>
-                                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">230</span>
-                                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">235</span>
-                                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">240</span>
-                                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">245</span>
-                                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">250</span>
-                                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">255</span>
-                                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">260</span>
-                                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">265</span>
-                                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">270</span>
-                                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">275</span>
-                                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">280</span>
-                                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">285</span>
-                                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">290</span>
-                                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">295</span>
-                                                <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs mr-px">300</span>
-                                        </div>
-                                        <div>
-                                                <span class="block text-xs text-gray-500">출고예정 - <span>8월4째주안</span></span>
-                                                <span class="block text-xs text-gray-500">오더마감 - <span>2020.08.15 오전</span></span>
-                                                <span class="block text-xs text-gray-500">정가 - \100,000</span>
-                                                <span class="block text-xs text-gray-500">공급률 - 50%</span>
-                                                <span class="block text-xs font-bold">공급가 \50,000</span>
-                                        </div>
-                                        <div class="flex justify-between mt-3">
-                                            <button class="bg-yellow-500 text-white rounded-md px-1 text-xs" onclick="location.href='https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=1191A212-100&pagingIndex=1&pagingSize=40&productSet=total&query=1191A212-100&sort=price_asc&timestamp=&viewType=list'">최저가확인</button>
-                                            <button class="bg-yellow-500 text-white rounded-md px-1 text-xs" onclick="openModal()">주문하기</button>
-                                        </div>
-                                    </div>
-                                    </div>
+                <div class="flex justify-between mt-3">
+                    <button class="bg-yellow-500 text-white rounded-md p-1 text-xs"
+                        onclick="location.href='https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=1191A212-100&pagingIndex=1&pagingSize=40&productSet=total&query=1191A212-100&sort=price_asc&timestamp=&viewType=list'">최저가확인</button>
+                    <button class="bg-yellow-500 text-white rounded-md p-1 text-xs" onclick="openModal()">주문하기</button>
+                </div>
+            </div>
+        </div>
+        <!-- end card -->
+        <!-- card -->
+        <div class="flex flex-col justify-c transition-all duration-150 p-3 w-1/2 shadow-md sm:w-1/2 md:w-1/2 lg:w-1/4 hover:shadow-2xl">
+            <div class="align-middle flex-shrink-0">
+                <img src="img/shose1.jpg" alt="">
+            </div>
+
+            <div class="mt-5">
+                <div>
+                    <h3 class="text-xl font-bold">1191A212-100</h3>
+                    <p class="text-gray-500 text-xs">AC_1191A212100_COURT S M_10</p>
+                </div>
+                <div class="mt-2 leading-3" style="font-size: 0px;">
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">220</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">225</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">230</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">235</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">240</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">245</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">250</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">255</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">260</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">265</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">270</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">275</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">280</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">285</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">290</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">295</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">300</span>
+                </div>
+                <div class="mt-2">
+                    <span class="block text-xs text-gray-500 mt-1">출고예정 - <span>8월4째주안</span></span>
+                    <span class="block text-xs text-gray-500 mt-1">오더마감 - <span>2020.08.15 오전</span></span>
+                    <span class="block text-xs text-gray-500 mt-1">정가 \100,000</span>
+                    <span class="block text-xs text-gray-500 mt-1">공급률 50%</span>
+                    <span class="block text-xs font-bold mt-1">공급가 \50,000</span>
+                </div>
+                <div class="flex justify-between mt-3">
+                    <button class="bg-yellow-500 text-white rounded-md p-1 text-xs"
+                        onclick="location.href='https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=1191A212-100&pagingIndex=1&pagingSize=40&productSet=total&query=1191A212-100&sort=price_asc&timestamp=&viewType=list'">최저가확인</button>
+                    <button class="bg-yellow-500 text-white rounded-md p-1 text-xs" onclick="openModal()">주문하기</button>
+                </div>
+            </div>
+        </div>
+        <!-- end card -->
+        <!-- card -->
+        <div class="flex flex-col justify-c transition-all duration-150 p-3 w-1/2 shadow-md sm:w-1/2 md:w-1/2 lg:w-1/4 hover:shadow-2xl">
+            <div class="align-middle flex-shrink-0">
+                <img src="img/shose1.jpg" alt="">
+            </div>
+
+            <div class="mt-5">
+                <div>
+                    <h3 class="text-xl font-bold">1191A212-100</h3>
+                    <p class="text-gray-500 text-xs">AC_1191A212100_COURT S M_10</p>
+                </div>
+                <div class="mt-2 leading-3" style="font-size: 0px;">
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">220</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">225</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">230</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">235</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">240</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">245</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">250</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">255</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">260</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">265</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">270</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">275</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">280</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">285</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">290</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">295</span>
+                    <span class="bg-yellow-500 text-white pl-1 pr-1 rounded-sm text-xs m-px">300</span>
+                </div>
+                <div class="mt-2">
+                    <span class="block text-xs text-gray-500 mt-1">출고예정 - <span>8월4째주안</span></span>
+                    <span class="block text-xs text-gray-500 mt-1">오더마감 - <span>2020.08.15 오전</span></span>
+                    <span class="block text-xs text-gray-500 mt-1">정가 \100,000</span>
+                    <span class="block text-xs text-gray-500 mt-1">공급률 50%</span>
+                    <span class="block text-xs font-bold mt-1">공급가 \50,000</span>
+                </div>
+                <div class="flex justify-between mt-3">
+                    <button class="bg-yellow-500 text-white rounded-md p-1 text-xs"
+                        onclick="location.href='https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=1191A212-100&pagingIndex=1&pagingSize=40&productSet=total&query=1191A212-100&sort=price_asc&timestamp=&viewType=list'">최저가확인</button>
+                    <button class="bg-yellow-500 text-white rounded-md p-1 text-xs" onclick="openModal()">주문하기</button>
+                </div>
+            </div>
+        </div>
+        <!-- end card -->
     </div>
 
     <!-- 모달 -->
     <div class="main-modal fixed w-full h-100 inset-0 z-50 overflow-hidden flex justify-center items-center animated fadeIn faster"
-    style="background: rgba(0,0,0,.7);">
-    <div
-        class="border border-teal-500 shadow-lg modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
-        <div class="modal-content py-4 text-left px-6">
-            <!--Title-->
-            <div class="flex justify-between items-center pb-3">
-                <p class="text-2xl font-bold">주문하기</p>
-                <div class="modal-close cursor-pointer z-50">
-                    <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                        viewBox="0 0 18 18">
-                        <path
-                            d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
-                        </path>
-                    </svg>
-                </div>
-            </div>
-            <!--Body-->
-            <div class="my-15">
-                <div class="flex">
-                    <div>
-                        <h3 class="text-xl font-bold">1191A212-100</h3>
-                        <p class="text-gray-500 text-xs">AC_1191A212100_COURT S M_10</p>
-                        
-                        <span class="inline text-xs bg-gray-900 text-white px-1">8월4째주</span>
-                        <span class="inline text-xs bg-gray-900 text-white px-1">2020.08.15</span>
-                    </div>
-                    <div class="w-2/1 text-center">
-                        <img src="img/shose1.jpg" alt="" class="w-full">
+        style="background: rgba(0,0,0,.7);">
+        <div
+            class="border border-teal-500 shadow-lg modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
+            <div class="modal-content py-4 text-left px-6">
+                <!--Title-->
+                <div class="flex justify-between items-center pb-3">
+                    <p class="text-2xl font-bold">주문하기</p>
+                    <div class="modal-close cursor-pointer z-50">
+                        <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 18 18">
+                            <path
+                                d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
+                            </path>
+                        </svg>
                     </div>
                 </div>
-                <div class="h-1/2 overflow-auto flex flex-wrap">
-                    <div class="flex flex-row text-center w-1/2 my-1">
-                        <span class="text-sm font-bold text-center">220</span>
-                        <div class="w-20 h-6 flex">
-                            <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
-                                <button data-action="decrement" class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
-                                  -
-                                </button>
-                                <input type="number" class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
-                              <button data-action="increment" class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
-                                <span class="">+</span>
-                              </button>
-                            </div>
-                            <span class="text-sm text-center">(169)</span>
+                <!--Body-->
+                <div class="my-15">
+                    <div class="flex">
+                        <div>
+                            <h3 class="text-xl font-bold">1191A212-100</h3>
+                            <p class="text-gray-500 text-xs">AC_1191A212100_COURT S M_10</p>
+
+                            <span class="inline text-xs bg-gray-900 text-white px-1">8월4째주</span>
+                            <span class="inline text-xs bg-gray-900 text-white px-1">2020.08.15</span>
+                        </div>
+                        <div class="w-2/1 text-center">
+                            <img src="img/shose1.jpg" alt="" class="w-full">
                         </div>
                     </div>
-                    <div class="flex flex-row text-center w-1/2 my-1">
-                        <span class="text-sm font-bold text-center">220</span>
-                        <div class="w-20 h-6 flex">
-                            <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
-                                <button data-action="decrement" class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
-                                  -
-                                </button>
-                                <input type="number" class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
-                              <button data-action="increment" class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
-                                <span class="">+</span>
-                              </button>
+                    <div class="h-1/2 overflow-auto flex flex-wrap">
+                        <div class="flex flex-row text-center w-1/2 my-1">
+                            <span class="text-sm font-bold text-center">220</span>
+                            <div class="w-20 h-6 flex">
+                                <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
+                                    <button data-action="decrement"
+                                        class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                                        -
+                                    </button>
+                                    <input type="number"
+                                        class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+                                        name="custom-input-number" value="0"></input>
+                                    <button data-action="increment"
+                                        class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                                        <span class="">+</span>
+                                    </button>
+                                </div>
+                                <span class="text-sm text-center">(169)</span>
                             </div>
-                            <span class="text-sm text-center">(169)</span>
                         </div>
-                    </div>
-                    <div class="flex flex-row text-center w-1/2 my-1">
-                        <span class="text-sm font-bold text-center">220</span>
-                        <div class="w-20 h-6 flex">
-                            <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
-                                <button data-action="decrement" class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
-                                  -
-                                </button>
-                                <input type="number" class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
-                              <button data-action="increment" class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
-                                <span class="">+</span>
-                              </button>
+                        <div class="flex flex-row text-center w-1/2 my-1">
+                            <span class="text-sm font-bold text-center">220</span>
+                            <div class="w-20 h-6 flex">
+                                <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
+                                    <button data-action="decrement"
+                                        class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                                        -
+                                    </button>
+                                    <input type="number"
+                                        class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+                                        name="custom-input-number" value="0"></input>
+                                    <button data-action="increment"
+                                        class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                                        <span class="">+</span>
+                                    </button>
+                                </div>
+                                <span class="text-sm text-center">(169)</span>
                             </div>
-                            <span class="text-sm text-center">(169)</span>
                         </div>
-                    </div>
-                    <div class="flex flex-row text-center w-1/2 my-1">
-                        <span class="text-sm font-bold text-center">220</span>
-                        <div class="w-20 h-6 flex">
-                            <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
-                                <button data-action="decrement" class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
-                                  -
-                                </button>
-                                <input type="number" class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
-                              <button data-action="increment" class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
-                                <span class="">+</span>
-                              </button>
+                        <div class="flex flex-row text-center w-1/2 my-1">
+                            <span class="text-sm font-bold text-center">220</span>
+                            <div class="w-20 h-6 flex">
+                                <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
+                                    <button data-action="decrement"
+                                        class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                                        -
+                                    </button>
+                                    <input type="number"
+                                        class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+                                        name="custom-input-number" value="0"></input>
+                                    <button data-action="increment"
+                                        class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                                        <span class="">+</span>
+                                    </button>
+                                </div>
+                                <span class="text-sm text-center">(169)</span>
                             </div>
-                            <span class="text-sm text-center">(169)</span>
                         </div>
-                    </div>
-                    <div class="flex flex-row text-center w-1/2 my-1">
-                        <span class="text-sm font-bold text-center">220</span>
-                        <div class="w-20 h-6 flex">
-                            <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
-                                <button data-action="decrement" class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
-                                  -
-                                </button>
-                                <input type="number" class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
-                              <button data-action="increment" class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
-                                <span class="">+</span>
-                              </button>
+                        <div class="flex flex-row text-center w-1/2 my-1">
+                            <span class="text-sm font-bold text-center">220</span>
+                            <div class="w-20 h-6 flex">
+                                <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
+                                    <button data-action="decrement"
+                                        class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                                        -
+                                    </button>
+                                    <input type="number"
+                                        class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+                                        name="custom-input-number" value="0"></input>
+                                    <button data-action="increment"
+                                        class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                                        <span class="">+</span>
+                                    </button>
+                                </div>
+                                <span class="text-sm text-center">(169)</span>
                             </div>
-                            <span class="text-sm text-center">(169)</span>
                         </div>
-                    </div>
-                    <div class="flex flex-row text-center w-1/2 my-1">
-                        <span class="text-sm font-bold text-center">220</span>
-                        <div class="w-20 h-6 flex">
-                            <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
-                                <button data-action="decrement" class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
-                                  -
-                                </button>
-                                <input type="number" class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
-                              <button data-action="increment" class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
-                                <span class="">+</span>
-                              </button>
+                        <div class="flex flex-row text-center w-1/2 my-1">
+                            <span class="text-sm font-bold text-center">220</span>
+                            <div class="w-20 h-6 flex">
+                                <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
+                                    <button data-action="decrement"
+                                        class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                                        -
+                                    </button>
+                                    <input type="number"
+                                        class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+                                        name="custom-input-number" value="0"></input>
+                                    <button data-action="increment"
+                                        class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                                        <span class="">+</span>
+                                    </button>
+                                </div>
+                                <span class="text-sm text-center">(169)</span>
                             </div>
-                            <span class="text-sm text-center">(169)</span>
                         </div>
-                    </div>
-                    <div class="flex flex-row text-center w-1/2 my-1">
-                        <span class="text-sm font-bold text-center">220</span>
-                        <div class="w-20 h-6 flex">
-                            <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
-                                <button data-action="decrement" class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
-                                  -
-                                </button>
-                                <input type="number" class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
-                              <button data-action="increment" class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
-                                <span class="">+</span>
-                              </button>
+                        <div class="flex flex-row text-center w-1/2 my-1">
+                            <span class="text-sm font-bold text-center">220</span>
+                            <div class="w-20 h-6 flex">
+                                <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
+                                    <button data-action="decrement"
+                                        class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                                        -
+                                    </button>
+                                    <input type="number"
+                                        class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+                                        name="custom-input-number" value="0"></input>
+                                    <button data-action="increment"
+                                        class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                                        <span class="">+</span>
+                                    </button>
+                                </div>
+                                <span class="text-sm text-center">(169)</span>
                             </div>
-                            <span class="text-sm text-center">(169)</span>
                         </div>
-                    </div>
-                    <div class="flex flex-row text-center w-1/2 my-1">
-                        <span class="text-sm font-bold text-center">220</span>
-                        <div class="w-20 h-6 flex">
-                            <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
-                                <button data-action="decrement" class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
-                                  -
-                                </button>
-                                <input type="number" class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
-                              <button data-action="increment" class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
-                                <span class="">+</span>
-                              </button>
+                        <div class="flex flex-row text-center w-1/2 my-1">
+                            <span class="text-sm font-bold text-center">220</span>
+                            <div class="w-20 h-6 flex">
+                                <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
+                                    <button data-action="decrement"
+                                        class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                                        -
+                                    </button>
+                                    <input type="number"
+                                        class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+                                        name="custom-input-number" value="0"></input>
+                                    <button data-action="increment"
+                                        class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                                        <span class="">+</span>
+                                    </button>
+                                </div>
+                                <span class="text-sm text-center">(169)</span>
                             </div>
-                            <span class="text-sm text-center">(169)</span>
                         </div>
-                    </div>
-                    <div class="flex flex-row text-center w-1/2 my-1">
-                        <span class="text-sm font-bold text-center">220</span>
-                        <div class="w-20 h-6 flex">
-                            <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
-                                <button data-action="decrement" class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
-                                  -
-                                </button>
-                                <input type="number" class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
-                              <button data-action="increment" class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
-                                <span class="">+</span>
-                              </button>
+                        <div class="flex flex-row text-center w-1/2 my-1">
+                            <span class="text-sm font-bold text-center">220</span>
+                            <div class="w-20 h-6 flex">
+                                <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
+                                    <button data-action="decrement"
+                                        class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                                        -
+                                    </button>
+                                    <input type="number"
+                                        class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+                                        name="custom-input-number" value="0"></input>
+                                    <button data-action="increment"
+                                        class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                                        <span class="">+</span>
+                                    </button>
+                                </div>
+                                <span class="text-sm text-center">(169)</span>
                             </div>
-                            <span class="text-sm text-center">(169)</span>
                         </div>
-                    </div>
-                    <div class="flex flex-row text-center w-1/2 my-1">
-                        <span class="text-sm font-bold text-center">220</span>
-                        <div class="w-20 h-6 flex">
-                            <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
-                                <button data-action="decrement" class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
-                                  -
-                                </button>
-                                <input type="number" class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
-                              <button data-action="increment" class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
-                                <span class="">+</span>
-                              </button>
+                        <div class="flex flex-row text-center w-1/2 my-1">
+                            <span class="text-sm font-bold text-center">220</span>
+                            <div class="w-20 h-6 flex">
+                                <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
+                                    <button data-action="decrement"
+                                        class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                                        -
+                                    </button>
+                                    <input type="number"
+                                        class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+                                        name="custom-input-number" value="0"></input>
+                                    <button data-action="increment"
+                                        class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                                        <span class="">+</span>
+                                    </button>
+                                </div>
+                                <span class="text-sm text-center">(169)</span>
                             </div>
-                            <span class="text-sm text-center">(169)</span>
                         </div>
-                    </div>
-                    <div class="flex flex-row text-center w-1/2 my-1">
-                        <span class="text-sm font-bold text-center">220</span>
-                        <div class="w-20 h-6 flex">
-                            <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
-                                <button data-action="decrement" class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
-                                  -
-                                </button>
-                                <input type="number" class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
-                              <button data-action="increment" class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
-                                <span class="">+</span>
-                              </button>
+                        <div class="flex flex-row text-center w-1/2 my-1">
+                            <span class="text-sm font-bold text-center">220</span>
+                            <div class="w-20 h-6 flex">
+                                <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
+                                    <button data-action="decrement"
+                                        class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                                        -
+                                    </button>
+                                    <input type="number"
+                                        class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+                                        name="custom-input-number" value="0"></input>
+                                    <button data-action="increment"
+                                        class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                                        <span class="">+</span>
+                                    </button>
+                                </div>
+                                <span class="text-sm text-center">(169)</span>
                             </div>
-                            <span class="text-sm text-center">(169)</span>
                         </div>
-                    </div>
-                    <div class="flex flex-row text-center w-1/2 my-1">
-                        <span class="text-sm font-bold text-center">220</span>
-                        <div class="w-20 h-6 flex">
-                            <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
-                                <button data-action="decrement" class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
-                                  -
-                                </button>
-                                <input type="number" class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
-                              <button data-action="increment" class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
-                                <span class="">+</span>
-                              </button>
+                        <div class="flex flex-row text-center w-1/2 my-1">
+                            <span class="text-sm font-bold text-center">220</span>
+                            <div class="w-20 h-6 flex">
+                                <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
+                                    <button data-action="decrement"
+                                        class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                                        -
+                                    </button>
+                                    <input type="number"
+                                        class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+                                        name="custom-input-number" value="0"></input>
+                                    <button data-action="increment"
+                                        class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                                        <span class="">+</span>
+                                    </button>
+                                </div>
+                                <span class="text-sm text-center">(169)</span>
                             </div>
-                            <span class="text-sm text-center">(169)</span>
                         </div>
-                    </div>
-                    <div class="flex flex-row text-center w-1/2 my-1">
-                        <span class="text-sm font-bold text-center">220</span>
-                        <div class="w-20 h-6 flex">
-                            <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
-                                <button data-action="decrement" class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
-                                  -
-                                </button>
-                                <input type="number" class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
-                              <button data-action="increment" class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
-                                <span class="">+</span>
-                              </button>
+                        <div class="flex flex-row text-center w-1/2 my-1">
+                            <span class="text-sm font-bold text-center">220</span>
+                            <div class="w-20 h-6 flex">
+                                <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
+                                    <button data-action="decrement"
+                                        class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                                        -
+                                    </button>
+                                    <input type="number"
+                                        class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+                                        name="custom-input-number" value="0"></input>
+                                    <button data-action="increment"
+                                        class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                                        <span class="">+</span>
+                                    </button>
+                                </div>
+                                <span class="text-sm text-center">(169)</span>
                             </div>
-                            <span class="text-sm text-center">(169)</span>
                         </div>
-                    </div>
-                    <div class="flex flex-row text-center w-1/2 my-1">
-                        <span class="text-sm font-bold text-center">220</span>
-                        <div class="w-20 h-6 flex">
-                            <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
-                                <button data-action="decrement" class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
-                                  -
-                                </button>
-                                <input type="number" class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
-                              <button data-action="increment" class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
-                                <span class="">+</span>
-                              </button>
+                        <div class="flex flex-row text-center w-1/2 my-1">
+                            <span class="text-sm font-bold text-center">220</span>
+                            <div class="w-20 h-6 flex">
+                                <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
+                                    <button data-action="decrement"
+                                        class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                                        -
+                                    </button>
+                                    <input type="number"
+                                        class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+                                        name="custom-input-number" value="0"></input>
+                                    <button data-action="increment"
+                                        class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                                        <span class="">+</span>
+                                    </button>
+                                </div>
+                                <span class="text-sm text-center">(169)</span>
                             </div>
-                            <span class="text-sm text-center">(169)</span>
                         </div>
-                    </div>
-                    <div class="flex flex-row text-center w-1/2 my-1">
-                        <span class="text-sm font-bold text-center">220</span>
-                        <div class="w-20 h-6 flex">
-                            <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
-                                <button data-action="decrement" class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
-                                  -
-                                </button>
-                                <input type="number" class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
-                              <button data-action="increment" class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
-                                <span class="">+</span>
-                              </button>
+                        <div class="flex flex-row text-center w-1/2 my-1">
+                            <span class="text-sm font-bold text-center">220</span>
+                            <div class="w-20 h-6 flex">
+                                <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
+                                    <button data-action="decrement"
+                                        class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                                        -
+                                    </button>
+                                    <input type="number"
+                                        class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+                                        name="custom-input-number" value="0"></input>
+                                    <button data-action="increment"
+                                        class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                                        <span class="">+</span>
+                                    </button>
+                                </div>
+                                <span class="text-sm text-center">(169)</span>
                             </div>
-                            <span class="text-sm text-center">(169)</span>
                         </div>
-                    </div>
-                    <div class="flex flex-row text-center w-1/2 my-1">
-                        <span class="text-sm font-bold text-center">220</span>
-                        <div class="w-20 h-6 flex">
-                            <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
-                                <button data-action="decrement" class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
-                                  -
-                                </button>
-                                <input type="number" class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
-                              <button data-action="increment" class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
-                                <span class="">+</span>
-                              </button>
+                        <div class="flex flex-row text-center w-1/2 my-1">
+                            <span class="text-sm font-bold text-center">220</span>
+                            <div class="w-20 h-6 flex">
+                                <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
+                                    <button data-action="decrement"
+                                        class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                                        -
+                                    </button>
+                                    <input type="number"
+                                        class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+                                        name="custom-input-number" value="0"></input>
+                                    <button data-action="increment"
+                                        class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                                        <span class="">+</span>
+                                    </button>
+                                </div>
+                                <span class="text-sm text-center">(169)</span>
                             </div>
-                            <span class="text-sm text-center">(169)</span>
                         </div>
-                    </div>
-                    <div class="flex flex-row text-center w-1/2 my-1">
-                        <span class="text-sm font-bold text-center">220</span>
-                        <div class="w-20 h-6 flex">
-                            <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
-                                <button data-action="decrement" class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
-                                  -
-                                </button>
-                                <input type="number" class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none" name="custom-input-number" value="0"></input>
-                              <button data-action="increment" class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
-                                <span class="">+</span>
-                              </button>
+                        <div class="flex flex-row text-center w-1/2 my-1">
+                            <span class="text-sm font-bold text-center">220</span>
+                            <div class="w-20 h-6 flex">
+                                <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
+                                    <button data-action="decrement"
+                                        class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                                        -
+                                    </button>
+                                    <input type="number"
+                                        class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+                                        name="custom-input-number" value="0"></input>
+                                    <button data-action="increment"
+                                        class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                                        <span class="">+</span>
+                                    </button>
+                                </div>
+                                <span class="text-sm text-center">(169)</span>
                             </div>
-                            <span class="text-sm text-center">(169)</span>
+                        </div>
+                        <div class="flex flex-row text-center w-1/2 my-1">
+                            <span class="text-sm font-bold text-center">220</span>
+                            <div class="w-20 h-6 flex">
+                                <div class="flex flex-row h-full w-full rounded-lg relative bg-transparent">
+                                    <button data-action="decrement"
+                                        class="text-sm ml-1 bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-l cursor-pointer outline-none">
+                                        -
+                                    </button>
+                                    <input type="number"
+                                        class="text-sm outline-none focus:outline-none text-center w-12 bg-gray-300 font-semibold text-md hover:text-black focus:text-black  md:text-basecursor-default flex items-center text-gray-700  outline-none"
+                                        name="custom-input-number" value="0"></input>
+                                    <button data-action="increment"
+                                        class="text-sm bg-gray-300 text-gray-600 hover:text-gray-700 hover:bg-gray-400 h-full w-20 rounded-r cursor-pointer">
+                                        <span class="">+</span>
+                                    </button>
+                                </div>
+                                <span class="text-sm text-center">(169)</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <!--Footer-->
-            <div class="flex flex-col justify-end pt-2">
-                <div class="flex justify-between">
-                    <div>
-                        <span class="font-bold">주문수량 2000</span>
+                <!--Footer-->
+                <div class="flex flex-col justify-end pt-2">
+                    <div class="flex justify-between">
+                        <div>
+                            <span class="font-bold">주문수량 2000</span>
+                        </div>
+                        <div>
+                            <span class="font-bold">주문금액 \56,000,000</span>
+                        </div>
                     </div>
-                    <div>
-                        <span class="font-bold">주문금액 \56,000,000</span>
+                    <div class="flex justify-between my-1">
+                        <div class="bg-gray-900 text-white px-1 rounded-sm text-sm">
+                            <span class="font-bold">정가 \100,000</span>
+                        </div>
+                        <div class="bg-gray-900 text-white px-1 rounded-sm ml-px text-sm">
+                            <span class="font-bold">공급률 50%</span>
+                        </div>
+                        <div class="bg-gray-900 text-white px-1 rounded-sm ml-px text-sm">
+                            <span class="font-bold">공급가 \50,000</span>
+                        </div>
                     </div>
+                    <div class="">
+                        <button
+                            class="float-right focus:outline-none px-4 bg-yellow-500 p-3 ml-3 rounded-lg text-white hover:bg-teal-400">장바구니</button>
+                        <button
+                            class="float-right focus:outline-none px-4 bg-yellow-500 p-3 ml-3 rounded-lg text-white hover:bg-teal-400">구매하기</button>
+                    </div>
+
                 </div>
-                <div class="flex justify-between my-1">
-                    <div class="bg-gray-900 text-white px-1 rounded-sm text-sm">
-                        <span class="font-bold">정가 \100,000</span>
-                    </div>
-                    <div class="bg-gray-900 text-white px-1 rounded-sm ml-px text-sm">
-                        <span class="font-bold">공급률 50%</span>
-                    </div>
-                    <div class="bg-gray-900 text-white px-1 rounded-sm ml-px text-sm">
-                        <span class="font-bold">공급가 \50,000</span>
-                    </div>
-                </div>
-                <div class="">
-                    <button
-                    class="float-right focus:outline-none px-4 bg-yellow-500 p-3 ml-3 rounded-lg text-white hover:bg-teal-400">장바구니</button>
-                <button
-                    class="float-right focus:outline-none px-4 bg-yellow-500 p-3 ml-3 rounded-lg text-white hover:bg-teal-400">구매하기</button>
-                </div>
-                
             </div>
         </div>
     </div>
-</div>
-<!-- end modal -->
+    <!-- end modal -->
 
-<script>
-    const modal = document.querySelector('.main-modal');
-    const closeButton = document.querySelectorAll('.modal-close');
 
-    const modalClose = () => {
-        modal.classList.remove('fadeIn');
-        modal.classList.add('fadeOut');
-        setTimeout(() => {
-            modal.style.display = 'none';
-        }, 500);
-    }
+    <script>
+        const modal = document.querySelector('.main-modal');
+        const closeButton = document.querySelectorAll('.modal-close');
 
-    const openModal = () => {
-        modal.classList.remove('fadeOut');
-        modal.classList.add('fadeIn');
-        modal.style.display = 'flex';
-    }
-
-    for (let i = 0; i < closeButton.length; i++) {
-
-        const elements = closeButton[i];
-
-        elements.onclick = (e) => modalClose();
-
-        modal.style.display = 'none';
-
-        window.onclick = function (event) {
-            if (event.target == modal) modalClose();
+        const modalClose = () => {
+            modal.classList.remove('fadeIn');
+            modal.classList.add('fadeOut');
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 500);
         }
-    }
-</script>
+
+        const openModal = () => {
+            modal.classList.remove('fadeOut');
+            modal.classList.add('fadeIn');
+            modal.style.display = 'flex';
+        }
+
+        for (let i = 0; i < closeButton.length; i++) {
+
+            const elements = closeButton[i];
+
+            elements.onclick = (e) => modalClose();
+
+            modal.style.display = 'none';
+
+            window.onclick = function (event) {
+                if (event.target == modal) se();
+            }
+        }
+    </script>
 </body>
+
 </html>
