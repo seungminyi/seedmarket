@@ -23,3 +23,5 @@
 [1014/162529.389:WARNING:process_reader_win.cc(156)] Thread 14476 should be suspended, but previous_suspend_count is 0
 [1014/162529.389:WARNING:process_reader_win.cc(156)] Thread 8052 should be suspended, but previous_suspend_count is 0
 [1014/162529.389:WARNING:process_reader_win.cc(156)] Thread 22252 should be suspended, but previous_suspend_count is 0
+[1016/131717.208:ERROR:directory_reader_win.cc(43)] FindFirstFile: 지정된 경로를 찾을 수 없습니다. (0x3)
+[1016/163506.116:ERROR:directory_reader_win.cc(43)] FindFirstFile: 지정된 경로를 찾을 수 없습니다. (0x3)
