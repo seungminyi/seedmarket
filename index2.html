@@ -91,12 +91,12 @@
         <div class="flex flex-col w-full border-b border-solid h-auto px-4 py-3 align-middle border-gray-300">
             <div class="flex flex-row justify-between">
                 <span class="font-bold leading-10 h-full align-middle">브랜드</span>
-                <div class="flex align-middle justify-center h-5 w-5 my-auto">
+                <div class="flex align-middle justify-center h-5 w-5 my-auto transition-all duration-150" id="brand_plus">
                     <img src="img/plus.png" alt="">
                 </div>
             </div>
             
-            <div class="flex flex-col h-auto px-4 py-3 justify-between align-middle">
+            <div class="flex flex-col h-0 overflow-hidden px-4 py-0 justify-between align-middle transition-all duration-150" id="brand_screen">
                 <div>
                     <label for="" class="flex">
                         <input type="checkbox" name="" id="" class="mr-2 form-checkbox text-yellow-500 my-auto">
@@ -117,10 +117,39 @@
                 </div>
             </div>
         </div>
-        <div class="flex w-full border-b border-solid h-16 px-4 py-3 justify-between align-middle border-gray-300">
-            <span class="font-bold leading-10 h-full align-middle">가격</span>
-            <div class="flex align-middle justify-center h-5 w-5 my-auto">
-                <img src="img/plus.png" alt="" id="detail_search_close">
+        <div class="flex flex-col w-full border-b border-solid h-auto px-4 py-3 align-middle border-gray-300">
+            <div class="flex flex-row justify-between">
+                <span class="font-bold leading-10 h-full align-middle">가격</span>
+                <div class="flex align-middle justify-center h-5 w-5 my-auto transition-all duration-150" id="price_plus">
+                    <img src="img/plus.png" alt="">
+                </div>
+            </div>
+            
+            <div class="flex flex-col h-0 overflow-hidden px-4 py-0 justify-between align-middle transition-all duration-150" id="price_screen">
+                <div>
+                    <label for="all_show" class="flex">
+                        <input type="radio" name="sort_price" id="all_show" class="mr-2 form-checkbox text-yellow-500 my-auto">
+                        <span class="font-bold leading-10 h-full align-middle">모두보기</span>
+                    </label>
+                </div>
+                <div>
+                    <label for="30th_under" class="flex">
+                        <input type="radio" name="sort_price" id="30th_under" class="mr-2 form-checkbox text-yellow-500 my-auto">
+                        <span class="font-bold leading-10 h-full align-middle">3만원 이하</span>
+                    </label>
+                </div>
+                <div>
+                    <label for="50th_under" class="flex">
+                        <input type="radio" name="sort_price" id="50th_under" class="mr-2 form-checkbox text-yellow-500 my-auto">
+                        <span class="font-bold leading-10 h-full align-middle">5만원 이하</span>
+                    </label>
+                </div>
+                <div>
+                    <label for="100th_under" class="flex">
+                        <input type="radio" name="sort_price" id="100th_under" class="mr-2 form-checkbox text-yellow-500 my-auto">
+                        <span class="font-bold leading-10 h-full align-middle">10만원 이하</span>
+                    </label>
+                </div>
             </div>
         </div>
     </div>
@@ -1072,6 +1101,45 @@
         var sort_btn = document.getElementById('sort_open')
         var sort_modal = document.getElementById('sort_modal')
         var sort_arrow = document.getElementById('sort_arrow')
+
+        //brand
+        var brand_plus = document.getElementById('brand_plus')
+        var brand_screen = document.getElementById('brand_screen')
+
+        //price
+        var price_plus = document.getElementById('price_plus')
+        var price_screen = document.getElementById('price_screen')
+
+        price_plus.onclick = function () {
+            if(price_screen.classList.contains('h-0')){
+                price_screen.classList.remove('h-0')
+                price_screen.classList.add('h-auto')
+                price_plus.classList.add("transform")
+                price_plus.classList.add("rotate-45")
+            }else{
+                price_screen.classList.remove('h-auto')
+                price_screen.classList.add('h-0')
+                price_plus.classList.remove('transform')
+                price_plus.classList.remove("rotate-45")
+            }
+            
+        }
+
+        brand_plus.onclick = function () {
+            if(brand_screen.classList.contains('h-0')){
+                brand_screen.classList.remove('h-0')
+                brand_screen.classList.add('h-auto')
+                brand_plus.classList.add("transform")
+                brand_plus.classList.add("rotate-45")
+            }else{
+                brand_screen.classList.remove('h-auto')
+                brand_screen.classList.add('h-0')
+                brand_plus.classList.remove('transform')
+                brand_plus.classList.remove("rotate-45")
+            }
+            
+        }
+
         sort_btn.onclick = function () {
             if(sort_modal.classList.contains('invisible')){
                 sort_modal.classList.remove('invisible')
