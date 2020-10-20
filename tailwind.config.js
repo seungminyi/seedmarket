@@ -9,6 +9,9 @@ module.exports = {
       left: {
         '-full' : '-100%'
       },
+      buttom: {
+        '-full' : '-100%'
+      },
     },
     minWidth: {
       '1/4': '25%',

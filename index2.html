@@ -7,14 +7,6 @@
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="output.css">
     <title>Document</title>
-    <!-- <script>
-        document.documentElement.addEventListener('touchend', function (event) {
-            var now = (new Date()).getTime();
-            if (now - lastTouchEnd <= 300) {
-                event.preventDefault();
-            } lastTouchEnd = now;
-        }, false);
-    </script> -->
     <style>
         .animated {
             -webkit-animation-duration: 1s;
@@ -57,12 +49,81 @@
                 opacity: 0;
             }
         }
+
+        
     </style>
 </head>
 
 <body class="">
-    <header class="flex bg-white shadow w-full h-16 px-5 py-4  mt-0 fixed top-0 justify-between">
-        <div class="flex align-middle justify-center h-8 w-8">
+    <nav class="navigator fixed bg-white h-full w-full top-0 left--full z-50 overflow-hidden transition-all duration-150"
+        id="navigator">
+        <div class="flex w-full border-b border-solid h-16 px-4 py-3 justify-between align-middle border-gray-300">
+            <div class="inline-flex h-full w-auto align-middle">
+                <span class="text-xs font-bold items-center inline-flex mr-2" onclick="location.href='index.html'">로그아웃</span>
+            </div>
+            <div class="flex align-middle justify-center h-8 w-8 my-auto">
+                <img src="img/btn-close.png" alt="" id="menu-close-btn">
+            </div>
+        </div>
+        <div class="flex w-full border-b border-solid h-16 px-4 py-3 justify-between align-middle border-gray-300">
+            <span class="font-bold leading-10 h-full align-middle">의류</span>
+        </div>
+        <div class="flex w-full border-b border-solid h-16 px-4 py-3 justify-between align-middle border-gray-300">
+            <span class="font-bold leading-10 h-full align-middle">신발</span>
+        </div>
+        <div class="flex w-full border-b border-solid h-16 px-4 py-3 justify-between align-middle border-gray-300">
+            <span class="font-bold leading-10 h-full align-middle">가방</span>
+        </div>
+    </nav>
+
+    <div class="mt-16 fixed bg-white h-full w-full buttom--full z-50 overflow-hidden transition-all duration-150" id="detail_search">
+        <div class="flex w-full border-b border-solid h-16 px-4 py-3 justify-between align-middle border-gray-300">
+            <div class="inline-flex h-8 w-auto align-middle my-auto">
+                <span class="font-bold items-center inline-flex mr-2">조건검색</span>
+            </div>
+            <div class="flex align-middle justify-center h-8 w-8">
+                <img src="img/btn-close.png" alt="" id="detail_search_close">
+            </div>
+        </div>
+        <div class="flex flex-col w-full border-b border-solid h-auto px-4 py-3 align-middle border-gray-300">
+            <div class="flex flex-row justify-between">
+                <span class="font-bold leading-10 h-full align-middle">브랜드</span>
+                <div class="flex align-middle justify-center h-5 w-5 my-auto">
+                    <img src="img/plus.png" alt="">
+                </div>
+            </div>
+            
+            <div class="flex flex-col h-auto px-4 py-3 justify-between align-middle">
+                <div>
+                    <label for="" class="flex">
+                        <input type="checkbox" name="" id="" class="mr-2 form-checkbox text-yellow-500 my-auto">
+                        <span class="font-bold leading-10 h-full align-middle">뉴발란스</span>
+                    </label>
+                </div>
+                <div>
+                    <label for="" class="flex">
+                        <input type="checkbox" name="" id="" class="mr-2 form-checkbox text-yellow-500 my-auto">
+                        <span class="font-bold leading-10 h-full align-middle">나이키</span>
+                    </label>
+                </div>
+                <div>
+                    <label for="" class="flex">
+                        <input type="checkbox" name="" id="" class="mr-2 form-checkbox text-yellow-500 my-auto">
+                        <span class="font-bold leading-10 h-full align-middle">아디다스</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="flex w-full border-b border-solid h-16 px-4 py-3 justify-between align-middle border-gray-300">
+            <span class="font-bold leading-10 h-full align-middle">가격</span>
+            <div class="flex align-middle justify-center h-5 w-5 my-auto">
+                <img src="img/plus.png" alt="" id="detail_search_close">
+            </div>
+        </div>
+    </div>
+
+    <header class="flex bg-white shadow w-full h-16 px-5 py-4 mt-0 fixed top-0 justify-between">
+        <div class="flex align-middle justify-center h-8 w-8" id="menu-open-btn">
             <img src="img/menu.png" alt="">
         </div>
         <div class="h-8 ml-8">
@@ -84,10 +145,10 @@
                 <img src="img/down_arrow.png" alt="" class="w-4 h-4 items-center inline-flex my-auto">
             </div>
             <div class="inline-flex h-8 w-auto">
-                <span class="text-sm font-bold items-center inline-flex mr-2">상품 213개</span>
+                <span class="text-sm font-bold items-center inline-flex">상품 213개</span>
             </div>
-            <div class="inline-flex h-8 w-auto align-middle">
-                <span class="text-xs font-bold items-center inline-flex mr-2">필터</span>
+            <div class="inline-flex h-8 w-auto align-middle" id="detail_search_open">
+                <span class="text-xs font-bold items-center inline-flex mr-2">조건검색</span>
                 <img src="img/fillter.png" alt="" class="w-4 h-4 items-center inline-flex my-auto">
             </div>
         </div>
@@ -971,6 +1032,34 @@
         ChannelIO('boot', {
             "pluginKey": "6fa5fd79-0b35-4014-b600-36a272733d82"
         });
+
+        // navgator
+        var menubtn = document.getElementById('menu-open-btn')
+        var menuclosebtn = document.getElementById('menu-close-btn')
+        var nav = document.getElementById('navigator')
+
+        var detail_search = document.getElementById('detail_search')
+        var detail_search_open = document.getElementById('detail_search_open')
+        var detail_search_close = document.getElementById('detail_search_close')
+
+        detail_search_open.onclick = function () {
+            detail_search.classList.add('bottom-0')
+            detail_search.classList.remove('buttom--full')
+        }
+
+        detail_search_close.onclick = function () {
+            detail_search.classList.add('buttom--full')
+            detail_search.classList.remove('bottom-0')
+        }
+
+        menubtn.onclick = function () {
+            nav.classList.add('left-0')
+            nav.classList.remove('left--full')
+        }
+        menuclosebtn.onclick = function () {
+            nav.classList.add('left--full')
+            nav.classList.remove('left-0')
+        }
     </script>
     <!-- End Channel Plugin -->
 </body>

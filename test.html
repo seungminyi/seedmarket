@@ -944,10 +944,12 @@
         var menuclosebtn = document.getElementById('menu-close-btn')
         var nav = document.getElementById('navigator')
         menubtn.onclick = function() {
+          nav.classList.add('left-0')
           nav.classList.remove('left--full')
         }
         menuclosebtn.onclick = function(){
             nav.classList.add('left--full')
+            nav.classList.remove('left-0')
         }
     </script>
     <!-- End Channel Plugin -->
