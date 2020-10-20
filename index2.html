@@ -66,7 +66,10 @@
             </div>
         </div>
         <div class="flex w-full border-b border-solid h-16 px-4 py-3 justify-between align-middle border-gray-300">
-            <span class="font-bold leading-10 h-full align-middle">의류</span>
+            <span class="font-bold leading-10 h-full align-middle">상의</span>
+        </div>
+        <div class="flex w-full border-b border-solid h-16 px-4 py-3 justify-between align-middle border-gray-300">
+            <span class="font-bold leading-10 h-full align-middle">하의</span>
         </div>
         <div class="flex w-full border-b border-solid h-16 px-4 py-3 justify-between align-middle border-gray-300">
             <span class="font-bold leading-10 h-full align-middle">신발</span>
@@ -141,8 +144,30 @@
         <div id="select-toolbar"
             class="flex bg-white shadow w-full h-16 px-5 py-4  mt-16 fixed top-0 justify-between hidden">
             <div class="inline-flex h-8 w-auto align-middle">
-                <span class="text-xs font-bold items-center inline-flex mr-2">신상품순</span>
-                <img src="img/down_arrow.png" alt="" class="w-4 h-4 items-center inline-flex my-auto">
+                <div class="my-auto" id="sort_open">
+                    <span class="text-xs font-bold items-center inline-flex mr-2">신상품순</span>
+                    <img src="img/down_arrow.png" alt="" class="w-4 h-4 items-center inline-flex my-auto transition-all duration-150" id="sort_arrow">
+                </div>
+                <div class="absolute flex bg-white shadow-lg w-24 ml-1 mt-10 h-auto left-0 invisible " id="sort_modal">
+                    <div class="mx-auto">
+                        <label for="new" class="flex">
+                            <input type="radio" name="sort" id="new" class="mr-2 form-radio text-yellow-500 my-auto" checked>
+                            <span class="font-bold text-xs leading-10 h-full align-middle">신상품순</span>
+                        </label>
+                        <label for="low_price" class="flex">
+                            <input type="radio" name="sort" id="low_price" class="mr-2 form-radio text-yellow-500 my-auto">
+                            <span class="font-bold text-xs leading-10 h-full align-middle">낮은가격순</span>
+                        </label>
+                        <label for="high_price" class="flex">
+                            <input type="radio" name="sort" id="high_price" class="mr-2 form-radio text-yellow-500 my-auto">
+                            <span class="font-bold text-xs leading-10 h-full align-middle">높은가격순</span>
+                        </label>
+                        <label for="order" class="flex">
+                            <input type="radio" name="sort" id="order" class="mr-2 form-radio text-yellow-500 my-auto">
+                            <span class="font-bold text-xs leading-10 h-full align-middle">출고예정순</span>
+                        </label>
+                    </div>
+                </div>
             </div>
             <div class="inline-flex h-8 w-auto">
                 <span class="text-sm font-bold items-center inline-flex">상품 213개</span>
@@ -1038,9 +1063,29 @@
         var menuclosebtn = document.getElementById('menu-close-btn')
         var nav = document.getElementById('navigator')
 
+        // detail
         var detail_search = document.getElementById('detail_search')
         var detail_search_open = document.getElementById('detail_search_open')
         var detail_search_close = document.getElementById('detail_search_close')
+
+        //sort
+        var sort_btn = document.getElementById('sort_open')
+        var sort_modal = document.getElementById('sort_modal')
+        var sort_arrow = document.getElementById('sort_arrow')
+        sort_btn.onclick = function () {
+            if(sort_modal.classList.contains('invisible')){
+                sort_modal.classList.remove('invisible')
+                sort_modal.classList.add('visible')
+                sort_arrow.classList.add("transform")
+                sort_arrow.classList.add("rotate-180")
+            }else{
+                sort_modal.classList.remove('visible')
+                sort_modal.classList.add('invisible')
+                sort_arrow.classList.remove('transform')
+                sort_arrow.classList.remove("rotate-180")
+            }
+            
+        }
 
         detail_search_open.onclick = function () {
             detail_search.classList.add('bottom-0')
