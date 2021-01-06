@@ -3,156 +3,710 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="output.css">
-    <style>
-        .animated {
-			-webkit-animation-duration: 1s;
-			animation-duration: 1s;
-			-webkit-animation-fill-mode: both;
-			animation-fill-mode: both;
-		}
-
-		.animated.faster {
-			-webkit-animation-duration: 500ms;
-			animation-duration: 500ms;
-		}
-
-		.fadeIn {
-			-webkit-animation-name: fadeIn;
-			animation-name: fadeIn;
-		}
-
-		.fadeOut {
-			-webkit-animation-name: fadeOut;
-			animation-name: fadeOut;
-		}
-
-		@keyframes fadeIn {
-			from {
-				opacity: 0;
-			}
-
-			to {
-				opacity: 1;
-			}
-		}
-
-		@keyframes fadeOut {
-			from {
-				opacity: 1;
-			}
-
-			to {
-				opacity: 0;
-			}
-		}
-    </style>
+    <title>THE WHOLESALE</title>
 </head>
-<body class="bg-white font-family-karla h-screen">
+<body>
+    <header class="bg-black h-20 py-3 px-10 flex items-center sticky top-0">
+        <h1 class="text-white font-bold inline leading-4 text-xl mr-5 align-middle">THE<br/>WHOLESALE</h1>
+        <div class="inline flex h-1/2">
+            <input class="h-10 px-3" type="text"/>
+            <button class="h-10 w-10 border-gray-600 border">
+                <img class="mx-2 h-6 w-6" src="./img/search-white.png" alt="search-icon">
+            </button>
+        </div>
+        <div class="pl-10">
+            <ul class="flex text-gray-500 text-2xl font-bold">
+                <li class="text-white pr-5"><a href="#">브랜드</a></li>
+                <li class="pr-5 hover:text-white"><a href="#">신발</a></li>
+                <li class="pr-5 hover:text-white"><a href="#">의류</a></li>
+                <li class="pr-5 hover:text-white"><a href="#">모자</a></li>
+                <li class="pr-5 hover:text-white"><a href="#">기타</a></li>
+            </ul>
+        </div>
+        <div class="absolute right-0 pr-10">
+            <ul class="text-white flex">
+                <li class="pr-2"><a href="#">마이페이지</a></li>
+                <li class="pr-2"><a href="#">장바구니</a></li>
+                <li class="pr-2"><a href="#">로그아웃</a></li>
+            </ul>
+        </div>
+    </header>
 
-    <div class="w-full flex flex-wrap">
-
-        <!-- Login Section -->
-        <div class="w-full md:w-1/2 flex flex-col">
-
-            <div class="flex justify-center md:justify-start pt-12 md:pl-12 md:-mb-24">
-                <!-- <a href="#" class="bg-black text-white font-bold text-xl p-4">Logo</a> -->
-                <img class="w-full" src="./img/CMLogo.png" alt="">
-            </div>
-
-            <div class="flex flex-col justify-center md:justify-start my-auto pt-8 md:pt-0 px-8 md:px-24 lg:px-32">
-                
-                <form class="flex flex-col pt-3 md:pt-8" onsubmit="event.preventDefault();">
-                    <div class="flex flex-col pt-4">
-                        <label for="email" class="text-lg">ID</label>
-                        <input type="email" id="email" placeholder="아이디" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline">
+    <main class="">
+        <div class="lg:px-64 py-16 w-full flex flex-row flex-wrap mx-auto">
+            <!-- card -->
+            <div class="w-1/2 xl:w-1/4 lg:w-1/3 md:w-1/3 px-3 py-2">
+                <div class="align-middle flex-shrink-0">
+                    <img src="img/shose1.jpg" alt="상품이미지">
+                </div>
+                <div class="mt-5">
+                    <div>
+                        <h3 class="text-xl font-bold">1191A212-100</h3>
+                        <p class="text-gray-500 text-xs font-bold">AC_1191A212100_COURT S M_10</p>
                     </div>
-    
-                    <div class="flex flex-col pt-4">
-                        <label for="password" class="text-lg">Password</label>
-                        <input type="password" id="password" placeholder="비밀번호" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline">
+                    <div class="mt-2 leading-3" style="font-size: 0px;">
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">220</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">225</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">230</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">235</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">240</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">245</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">250</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">255</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">260</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">265</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">270</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">275</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">280</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">285</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">290</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">295</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">300</span>
                     </div>
-    
-                    <input type="submit" value="로그인" onclick="location.href='index2.html'" class="bg-black text-white font-bold text-lg hover:bg-gray-700 p-2 mt-8">
-                </form>
-                <div class="text-center pt-12 pb-12">
-                    <p>SEED MARKET 은 회원만 이용 가능합니다  <a href="#" class="underline font-semibold show-modal" onclick="openModal()">회원가입</a></p>
+
+                    <div class="flex">
+                        <span class="font-bold">\100,000</span>&nbsp;/&nbsp; 
+                        <span class="font-bold text-red-700">50%</span>&nbsp;/&nbsp; 
+                        <span class="font-bold text-red-700">\50,000</span>
+                    </div>
+
+                    <div>
+                        <span class="block text-xs text-black font-bold mt-1">출고예정 - <span>8월4째주안</span></span>
+                    <span class="block text-xs text-black font-bold mt-1">오더마감 - <span>2020.08.15 오전</span></span>
+                    </div>
+
+                    <div class="flex justify-between mt-3 bg-red-600">
+                        <button class="bg-red-600 text-white rounded-md p-2 text-xs flex items-center"
+                            onclick="location.href='https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=1191A212-100&pagingIndex=1&pagingSize=40&productSet=total&query=1191A212-100&sort=price_asc&timestamp=&viewType=list'">
+                            <img class="w-5" src="./img/naver-icon.png" alt="네이버 아이콘">
+                            <span class="pl-1">최저가</span></button>
+                        <button class="text-white rounded-md p-2 text-xs" onclick="openModal()">구매하기</button>
+                    </div>
                 </div>
             </div>
-        </div>
+            <!-- card -->
+            <!-- card -->
+            <div class="w-1/2 xl:w-1/4 lg:w-1/3 md:w-1/3 px-3 py-2">
+                <div class="align-middle flex-shrink-0">
+                    <img src="img/shose1.jpg" alt="상품이미지">
+                </div>
+                <div class="mt-5">
+                    <div>
+                        <h3 class="text-xl font-bold">1191A212-100</h3>
+                        <p class="text-gray-500 text-xs font-bold">AC_1191A212100_COURT S M_10</p>
+                    </div>
+                    <div class="mt-2 leading-3" style="font-size: 0px;">
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">220</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">225</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">230</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">235</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">240</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">245</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">250</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">255</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">260</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">265</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">270</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">275</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">280</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">285</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">290</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">295</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">300</span>
+                    </div>
 
-        <!-- Image Section -->
-        <div class="w-1/2 shadow-2xl">
-            <img class="object-cover w-full h-screen hidden md:block" src="http://postfiles6.naver.net/MjAxNzAyMDZfMTE3/MDAxNDg2MzUzMDUyMTAx.ORSApJkNKZfFwPK7bN09wFiKff7j7uegWZisGWdhGakg.lXriM63n8TAFA8oL9wMCGTuEuTesush5b9HGAYhDgP8g.JPEG.0008851/%EB%82%98%EC%9D%B4%ED%82%A4_%EB%B0%B0%EA%B2%BD%ED%99%94%EB%A9%B4_%2818%29.jpg?type=w1">
-        </div>
-    </div>
+                    <div class="flex">
+                        <span class="font-bold">\100,000</span>&nbsp;/&nbsp; 
+                        <span class="font-bold text-red-700">50%</span>&nbsp;/&nbsp; 
+                        <span class="font-bold text-red-700">\50,000</span>
+                    </div>
 
-    <!-- 모달 -->
-    <div class="main-modal fixed w-full h-100 inset-0 z-50 overflow-hidden flex justify-center items-center animated fadeIn faster"
-    style="background: rgba(0,0,0,.7);">
-    <div
-        class="border border-teal-500 shadow-lg modal-container bg-white w-11/12 md:max-w-md mx-auto rounded shadow-lg z-50 overflow-y-auto">
-        <div class="modal-content py-4 text-left px-6">
-            <!--Title-->
-            <div class="flex justify-between items-center pb-3">
-                <p class="text-2xl font-bold">회원가입</p>
-                <div class="modal-close cursor-pointer z-50">
-                    <svg class="fill-current text-black" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
-                        viewBox="0 0 18 18">
-                        <path
-                            d="M14.53 4.53l-1.06-1.06L9 7.94 4.53 3.47 3.47 4.53 7.94 9l-4.47 4.47 1.06 1.06L9 10.06l4.47 4.47 1.06-1.06L10.06 9z">
-                        </path>
-                    </svg>
+                    <div>
+                        <span class="block text-xs text-black font-bold mt-1">출고예정 - <span>8월4째주안</span></span>
+                    <span class="block text-xs text-black font-bold mt-1">오더마감 - <span>2020.08.15 오전</span></span>
+                    </div>
+
+                    <div class="flex justify-between mt-3 bg-red-600">
+                        <button class="bg-red-600 text-white rounded-md p-2 text-xs flex items-center"
+                            onclick="location.href='https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=1191A212-100&pagingIndex=1&pagingSize=40&productSet=total&query=1191A212-100&sort=price_asc&timestamp=&viewType=list'">
+                            <img class="w-5" src="./img/naver-icon.png" alt="네이버 아이콘">
+                            <span class="pl-1">최저가</span></button>
+                        <button class="text-white rounded-md p-2 text-xs" onclick="openModal()">구매하기</button>
+                    </div>
                 </div>
             </div>
-            <!--Body-->
-            <div class="my-5">
-                <form action="#" method="post">
-                    <input type="text" name="" placeholder="아이디" id="" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline">
-                    <input type="text" name="" placeholder="패스워드" id="" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mt-1 leading-tight focus:outline-none focus:shadow-outline">
-                </form>
+            <!-- card -->
+            <!-- card -->
+            <div class="w-1/2 xl:w-1/4 lg:w-1/3 md:w-1/3 px-3 py-2">
+                <div class="align-middle flex-shrink-0">
+                    <img src="img/shose1.jpg" alt="상품이미지">
+                </div>
+                <div class="mt-5">
+                    <div>
+                        <h3 class="text-xl font-bold">1191A212-100</h3>
+                        <p class="text-gray-500 text-xs font-bold">AC_1191A212100_COURT S M_10</p>
+                    </div>
+                    <div class="mt-2 leading-3" style="font-size: 0px;">
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">220</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">225</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">230</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">235</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">240</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">245</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">250</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">255</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">260</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">265</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">270</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">275</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">280</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">285</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">290</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">295</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">300</span>
+                    </div>
+
+                    <div class="flex">
+                        <span class="font-bold">\100,000</span>&nbsp;/&nbsp; 
+                        <span class="font-bold text-red-700">50%</span>&nbsp;/&nbsp; 
+                        <span class="font-bold text-red-700">\50,000</span>
+                    </div>
+
+                    <div>
+                        <span class="block text-xs text-black font-bold mt-1">출고예정 - <span>8월4째주안</span></span>
+                    <span class="block text-xs text-black font-bold mt-1">오더마감 - <span>2020.08.15 오전</span></span>
+                    </div>
+
+                    <div class="flex justify-between mt-3 bg-red-600">
+                        <button class="bg-red-600 text-white rounded-md p-2 text-xs flex items-center"
+                            onclick="location.href='https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=1191A212-100&pagingIndex=1&pagingSize=40&productSet=total&query=1191A212-100&sort=price_asc&timestamp=&viewType=list'">
+                            <img class="w-5" src="./img/naver-icon.png" alt="네이버 아이콘">
+                            <span class="pl-1">최저가</span></button>
+                        <button class="text-white rounded-md p-2 text-xs" onclick="openModal()">구매하기</button>
+                    </div>
+                </div>
             </div>
-            <!--Footer-->
-            <div class="flex justify-end pt-2">
-                <button
-                    class="focus:outline-none px-4 bg-yellow-500 p-3 ml-3 rounded-lg text-white hover:bg-teal-400">가입하기</button>
+            <!-- card -->
+            <!-- card -->
+            <div class="w-1/2 xl:w-1/4 lg:w-1/3 md:w-1/3 px-3 py-2">
+                <div class="align-middle flex-shrink-0">
+                    <img src="img/shose1.jpg" alt="상품이미지">
+                </div>
+                <div class="mt-5">
+                    <div>
+                        <h3 class="text-xl font-bold">1191A212-100</h3>
+                        <p class="text-gray-500 text-xs font-bold">AC_1191A212100_COURT S M_10</p>
+                    </div>
+                    <div class="mt-2 leading-3" style="font-size: 0px;">
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">220</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">225</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">230</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">235</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">240</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">245</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">250</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">255</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">260</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">265</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">270</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">275</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">280</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">285</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">290</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">295</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">300</span>
+                    </div>
+
+                    <div class="flex">
+                        <span class="font-bold">\100,000</span>&nbsp;/&nbsp; 
+                        <span class="font-bold text-red-700">50%</span>&nbsp;/&nbsp; 
+                        <span class="font-bold text-red-700">\50,000</span>
+                    </div>
+
+                    <div>
+                        <span class="block text-xs text-black font-bold mt-1">출고예정 - <span>8월4째주안</span></span>
+                    <span class="block text-xs text-black font-bold mt-1">오더마감 - <span>2020.08.15 오전</span></span>
+                    </div>
+
+                    <div class="flex justify-between mt-3 bg-red-600">
+                        <button class="bg-red-600 text-white rounded-md p-2 text-xs flex items-center"
+                            onclick="location.href='https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=1191A212-100&pagingIndex=1&pagingSize=40&productSet=total&query=1191A212-100&sort=price_asc&timestamp=&viewType=list'">
+                            <img class="w-5" src="./img/naver-icon.png" alt="네이버 아이콘">
+                            <span class="pl-1">최저가</span></button>
+                        <button class="text-white rounded-md p-2 text-xs" onclick="openModal()">구매하기</button>
+                    </div>
+                </div>
             </div>
+            <!-- card -->
+            <!-- card -->
+            <div class="w-1/2 xl:w-1/4 lg:w-1/3 md:w-1/3 px-3 py-2">
+                <div class="align-middle flex-shrink-0">
+                    <img src="img/shose1.jpg" alt="상품이미지">
+                </div>
+                <div class="mt-5">
+                    <div>
+                        <h3 class="text-xl font-bold">1191A212-100</h3>
+                        <p class="text-gray-500 text-xs font-bold">AC_1191A212100_COURT S M_10</p>
+                    </div>
+                    <div class="mt-2 leading-3" style="font-size: 0px;">
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">220</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">225</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">230</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">235</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">240</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">245</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">250</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">255</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">260</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">265</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">270</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">275</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">280</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">285</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">290</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">295</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">300</span>
+                    </div>
+
+                    <div class="flex">
+                        <span class="font-bold">\100,000</span>&nbsp;/&nbsp; 
+                        <span class="font-bold text-red-700">50%</span>&nbsp;/&nbsp; 
+                        <span class="font-bold text-red-700">\50,000</span>
+                    </div>
+
+                    <div>
+                        <span class="block text-xs text-black font-bold mt-1">출고예정 - <span>8월4째주안</span></span>
+                    <span class="block text-xs text-black font-bold mt-1">오더마감 - <span>2020.08.15 오전</span></span>
+                    </div>
+
+                    <div class="flex justify-between mt-3 bg-red-600">
+                        <button class="bg-red-600 text-white rounded-md p-2 text-xs flex items-center"
+                            onclick="location.href='https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=1191A212-100&pagingIndex=1&pagingSize=40&productSet=total&query=1191A212-100&sort=price_asc&timestamp=&viewType=list'">
+                            <img class="w-5" src="./img/naver-icon.png" alt="네이버 아이콘">
+                            <span class="pl-1">최저가</span></button>
+                        <button class="text-white rounded-md p-2 text-xs" onclick="openModal()">구매하기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- card -->
+            <!-- card -->
+            <div class="w-1/2 xl:w-1/4 lg:w-1/3 md:w-1/3 px-3 py-2">
+                <div class="align-middle flex-shrink-0">
+                    <img src="img/shose1.jpg" alt="상품이미지">
+                </div>
+                <div class="mt-5">
+                    <div>
+                        <h3 class="text-xl font-bold">1191A212-100</h3>
+                        <p class="text-gray-500 text-xs font-bold">AC_1191A212100_COURT S M_10</p>
+                    </div>
+                    <div class="mt-2 leading-3" style="font-size: 0px;">
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">220</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">225</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">230</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">235</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">240</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">245</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">250</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">255</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">260</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">265</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">270</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">275</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">280</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">285</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">290</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">295</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">300</span>
+                    </div>
+
+                    <div class="flex">
+                        <span class="font-bold">\100,000</span>&nbsp;/&nbsp; 
+                        <span class="font-bold text-red-700">50%</span>&nbsp;/&nbsp; 
+                        <span class="font-bold text-red-700">\50,000</span>
+                    </div>
+
+                    <div>
+                        <span class="block text-xs text-black font-bold mt-1">출고예정 - <span>8월4째주안</span></span>
+                    <span class="block text-xs text-black font-bold mt-1">오더마감 - <span>2020.08.15 오전</span></span>
+                    </div>
+
+                    <div class="flex justify-between mt-3 bg-red-600">
+                        <button class="bg-red-600 text-white rounded-md p-2 text-xs flex items-center"
+                            onclick="location.href='https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=1191A212-100&pagingIndex=1&pagingSize=40&productSet=total&query=1191A212-100&sort=price_asc&timestamp=&viewType=list'">
+                            <img class="w-5" src="./img/naver-icon.png" alt="네이버 아이콘">
+                            <span class="pl-1">최저가</span></button>
+                        <button class="text-white rounded-md p-2 text-xs" onclick="openModal()">구매하기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- card -->
+            <!-- card -->
+            <div class="w-1/2 xl:w-1/4 lg:w-1/3 md:w-1/3 px-3 py-2">
+                <div class="align-middle flex-shrink-0">
+                    <img src="img/shose1.jpg" alt="상품이미지">
+                </div>
+                <div class="mt-5">
+                    <div>
+                        <h3 class="text-xl font-bold">1191A212-100</h3>
+                        <p class="text-gray-500 text-xs font-bold">AC_1191A212100_COURT S M_10</p>
+                    </div>
+                    <div class="mt-2 leading-3" style="font-size: 0px;">
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">220</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">225</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">230</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">235</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">240</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">245</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">250</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">255</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">260</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">265</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">270</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">275</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">280</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">285</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">290</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">295</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">300</span>
+                    </div>
+
+                    <div class="flex">
+                        <span class="font-bold">\100,000</span>&nbsp;/&nbsp; 
+                        <span class="font-bold text-red-700">50%</span>&nbsp;/&nbsp; 
+                        <span class="font-bold text-red-700">\50,000</span>
+                    </div>
+
+                    <div>
+                        <span class="block text-xs text-black font-bold mt-1">출고예정 - <span>8월4째주안</span></span>
+                    <span class="block text-xs text-black font-bold mt-1">오더마감 - <span>2020.08.15 오전</span></span>
+                    </div>
+
+                    <div class="flex justify-between mt-3 bg-red-600">
+                        <button class="bg-red-600 text-white rounded-md p-2 text-xs flex items-center"
+                            onclick="location.href='https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=1191A212-100&pagingIndex=1&pagingSize=40&productSet=total&query=1191A212-100&sort=price_asc&timestamp=&viewType=list'">
+                            <img class="w-5" src="./img/naver-icon.png" alt="네이버 아이콘">
+                            <span class="pl-1">최저가</span></button>
+                        <button class="text-white rounded-md p-2 text-xs" onclick="openModal()">구매하기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- card -->
+            <!-- card -->
+            <div class="w-1/2 xl:w-1/4 lg:w-1/3 md:w-1/3 px-3 py-2">
+                <div class="align-middle flex-shrink-0">
+                    <img src="img/shose1.jpg" alt="상품이미지">
+                </div>
+                <div class="mt-5">
+                    <div>
+                        <h3 class="text-xl font-bold">1191A212-100</h3>
+                        <p class="text-gray-500 text-xs font-bold">AC_1191A212100_COURT S M_10</p>
+                    </div>
+                    <div class="mt-2 leading-3" style="font-size: 0px;">
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">220</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">225</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">230</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">235</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">240</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">245</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">250</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">255</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">260</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">265</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">270</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">275</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">280</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">285</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">290</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">295</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">300</span>
+                    </div>
+
+                    <div class="flex">
+                        <span class="font-bold">\100,000</span>&nbsp;/&nbsp; 
+                        <span class="font-bold text-red-700">50%</span>&nbsp;/&nbsp; 
+                        <span class="font-bold text-red-700">\50,000</span>
+                    </div>
+
+                    <div>
+                        <span class="block text-xs text-black font-bold mt-1">출고예정 - <span>8월4째주안</span></span>
+                    <span class="block text-xs text-black font-bold mt-1">오더마감 - <span>2020.08.15 오전</span></span>
+                    </div>
+
+                    <div class="flex justify-between mt-3 bg-red-600">
+                        <button class="bg-red-600 text-white rounded-md p-2 text-xs flex items-center"
+                            onclick="location.href='https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=1191A212-100&pagingIndex=1&pagingSize=40&productSet=total&query=1191A212-100&sort=price_asc&timestamp=&viewType=list'">
+                            <img class="w-5" src="./img/naver-icon.png" alt="네이버 아이콘">
+                            <span class="pl-1">최저가</span></button>
+                        <button class="text-white rounded-md p-2 text-xs" onclick="openModal()">구매하기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- card -->
+            <!-- card -->
+            <div class="w-1/2 xl:w-1/4 lg:w-1/3 md:w-1/3 px-3 py-2">
+                <div class="align-middle flex-shrink-0">
+                    <img src="img/shose1.jpg" alt="상품이미지">
+                </div>
+                <div class="mt-5">
+                    <div>
+                        <h3 class="text-xl font-bold">1191A212-100</h3>
+                        <p class="text-gray-500 text-xs font-bold">AC_1191A212100_COURT S M_10</p>
+                    </div>
+                    <div class="mt-2 leading-3" style="font-size: 0px;">
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">220</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">225</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">230</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">235</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">240</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">245</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">250</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">255</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">260</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">265</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">270</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">275</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">280</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">285</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">290</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">295</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">300</span>
+                    </div>
+
+                    <div class="flex">
+                        <span class="font-bold">\100,000</span>&nbsp;/&nbsp; 
+                        <span class="font-bold text-red-700">50%</span>&nbsp;/&nbsp; 
+                        <span class="font-bold text-red-700">\50,000</span>
+                    </div>
+
+                    <div>
+                        <span class="block text-xs text-black font-bold mt-1">출고예정 - <span>8월4째주안</span></span>
+                    <span class="block text-xs text-black font-bold mt-1">오더마감 - <span>2020.08.15 오전</span></span>
+                    </div>
+
+                    <div class="flex justify-between mt-3 bg-red-600">
+                        <button class="bg-red-600 text-white rounded-md p-2 text-xs flex items-center"
+                            onclick="location.href='https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=1191A212-100&pagingIndex=1&pagingSize=40&productSet=total&query=1191A212-100&sort=price_asc&timestamp=&viewType=list'">
+                            <img class="w-5" src="./img/naver-icon.png" alt="네이버 아이콘">
+                            <span class="pl-1">최저가</span></button>
+                        <button class="text-white rounded-md p-2 text-xs" onclick="openModal()">구매하기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- card -->
+            <!-- card -->
+            <div class="w-1/2 xl:w-1/4 lg:w-1/3 md:w-1/3 px-3 py-2">
+                <div class="align-middle flex-shrink-0">
+                    <img src="img/shose1.jpg" alt="상품이미지">
+                </div>
+                <div class="mt-5">
+                    <div>
+                        <h3 class="text-xl font-bold">1191A212-100</h3>
+                        <p class="text-gray-500 text-xs font-bold">AC_1191A212100_COURT S M_10</p>
+                    </div>
+                    <div class="mt-2 leading-3" style="font-size: 0px;">
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">220</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">225</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">230</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">235</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">240</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">245</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">250</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">255</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">260</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">265</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">270</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">275</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">280</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">285</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">290</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">295</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">300</span>
+                    </div>
+
+                    <div class="flex">
+                        <span class="font-bold">\100,000</span>&nbsp;/&nbsp; 
+                        <span class="font-bold text-red-700">50%</span>&nbsp;/&nbsp; 
+                        <span class="font-bold text-red-700">\50,000</span>
+                    </div>
+
+                    <div>
+                        <span class="block text-xs text-black font-bold mt-1">출고예정 - <span>8월4째주안</span></span>
+                    <span class="block text-xs text-black font-bold mt-1">오더마감 - <span>2020.08.15 오전</span></span>
+                    </div>
+
+                    <div class="flex justify-between mt-3 bg-red-600">
+                        <button class="bg-red-600 text-white rounded-md p-2 text-xs flex items-center"
+                            onclick="location.href='https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=1191A212-100&pagingIndex=1&pagingSize=40&productSet=total&query=1191A212-100&sort=price_asc&timestamp=&viewType=list'">
+                            <img class="w-5" src="./img/naver-icon.png" alt="네이버 아이콘">
+                            <span class="pl-1">최저가</span></button>
+                        <button class="text-white rounded-md p-2 text-xs" onclick="openModal()">구매하기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- card -->
+            <!-- card -->
+            <div class="w-1/2 xl:w-1/4 lg:w-1/3 md:w-1/3 px-3 py-2">
+                <div class="align-middle flex-shrink-0">
+                    <img src="img/shose1.jpg" alt="상품이미지">
+                </div>
+                <div class="mt-5">
+                    <div>
+                        <h3 class="text-xl font-bold">1191A212-100</h3>
+                        <p class="text-gray-500 text-xs font-bold">AC_1191A212100_COURT S M_10</p>
+                    </div>
+                    <div class="mt-2 leading-3" style="font-size: 0px;">
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">220</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">225</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">230</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">235</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">240</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">245</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">250</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">255</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">260</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">265</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">270</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">275</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">280</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">285</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">290</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">295</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">300</span>
+                    </div>
+
+                    <div class="flex">
+                        <span class="font-bold">\100,000</span>&nbsp;/&nbsp; 
+                        <span class="font-bold text-red-700">50%</span>&nbsp;/&nbsp; 
+                        <span class="font-bold text-red-700">\50,000</span>
+                    </div>
+
+                    <div>
+                        <span class="block text-xs text-black font-bold mt-1">출고예정 - <span>8월4째주안</span></span>
+                    <span class="block text-xs text-black font-bold mt-1">오더마감 - <span>2020.08.15 오전</span></span>
+                    </div>
+
+                    <div class="flex justify-between mt-3 bg-red-600">
+                        <button class="bg-red-600 text-white rounded-md p-2 text-xs flex items-center"
+                            onclick="location.href='https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=1191A212-100&pagingIndex=1&pagingSize=40&productSet=total&query=1191A212-100&sort=price_asc&timestamp=&viewType=list'">
+                            <img class="w-5" src="./img/naver-icon.png" alt="네이버 아이콘">
+                            <span class="pl-1">최저가</span></button>
+                        <button class="text-white rounded-md p-2 text-xs" onclick="openModal()">구매하기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- card -->
+            <!-- card -->
+            <div class="w-1/2 xl:w-1/4 lg:w-1/3 md:w-1/3 px-3 py-2">
+                <div class="align-middle flex-shrink-0">
+                    <img src="img/shose1.jpg" alt="상품이미지">
+                </div>
+                <div class="mt-5">
+                    <div>
+                        <h3 class="text-xl font-bold">1191A212-100</h3>
+                        <p class="text-gray-500 text-xs font-bold">AC_1191A212100_COURT S M_10</p>
+                    </div>
+                    <div class="mt-2 leading-3" style="font-size: 0px;">
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">220</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">225</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">230</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">235</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">240</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">245</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">250</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">255</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">260</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">265</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">270</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">275</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">280</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">285</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">290</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">295</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">300</span>
+                    </div>
+
+                    <div class="flex">
+                        <span class="font-bold">\100,000</span>&nbsp;/&nbsp; 
+                        <span class="font-bold text-red-700">50%</span>&nbsp;/&nbsp; 
+                        <span class="font-bold text-red-700">\50,000</span>
+                    </div>
+
+                    <div>
+                        <span class="block text-xs text-black font-bold mt-1">출고예정 - <span>8월4째주안</span></span>
+                    <span class="block text-xs text-black font-bold mt-1">오더마감 - <span>2020.08.15 오전</span></span>
+                    </div>
+
+                    <div class="flex justify-between mt-3 bg-red-600">
+                        <button class="bg-red-600 text-white rounded-md p-2 text-xs flex items-center"
+                            onclick="location.href='https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=1191A212-100&pagingIndex=1&pagingSize=40&productSet=total&query=1191A212-100&sort=price_asc&timestamp=&viewType=list'">
+                            <img class="w-5" src="./img/naver-icon.png" alt="네이버 아이콘">
+                            <span class="pl-1">최저가</span></button>
+                        <button class="text-white rounded-md p-2 text-xs" onclick="openModal()">구매하기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- card -->
+            <!-- card -->
+            <div class="w-1/2 xl:w-1/4 lg:w-1/3 md:w-1/3 px-3 py-2">
+                <div class="align-middle flex-shrink-0">
+                    <img src="img/shose1.jpg" alt="상품이미지">
+                </div>
+                <div class="mt-5">
+                    <div>
+                        <h3 class="text-xl font-bold">1191A212-100</h3>
+                        <p class="text-gray-500 text-xs font-bold">AC_1191A212100_COURT S M_10</p>
+                    </div>
+                    <div class="mt-2 leading-3" style="font-size: 0px;">
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">220</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">225</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">230</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">235</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">240</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">245</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">250</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">255</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">260</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">265</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">270</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">275</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">280</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">285</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">290</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">295</span>
+                        <span class="text-white font-bold pl-1 pr-1 rounded-sm text-xs m-px bg-red-600">300</span>
+                    </div>
+
+                    <div class="flex">
+                        <span class="font-bold">\100,000</span>&nbsp;/&nbsp; 
+                        <span class="font-bold text-red-700">50%</span>&nbsp;/&nbsp; 
+                        <span class="font-bold text-red-700">\50,000</span>
+                    </div>
+
+                    <div>
+                        <span class="block text-xs text-black font-bold mt-1">출고예정 - <span>8월4째주안</span></span>
+                    <span class="block text-xs text-black font-bold mt-1">오더마감 - <span>2020.08.15 오전</span></span>
+                    </div>
+
+                    <div class="flex justify-between mt-3 bg-red-600">
+                        <button class="bg-red-600 text-white rounded-md p-2 text-xs flex items-center"
+                            onclick="location.href='https://search.shopping.naver.com/search/all?frm=NVSHATC&origQuery=1191A212-100&pagingIndex=1&pagingSize=40&productSet=total&query=1191A212-100&sort=price_asc&timestamp=&viewType=list'">
+                            <img class="w-5" src="./img/naver-icon.png" alt="네이버 아이콘">
+                            <span class="pl-1">최저가</span></button>
+                        <button class="text-white rounded-md p-2 text-xs" onclick="openModal()">구매하기</button>
+                    </div>
+                </div>
+            </div>
+            <!-- card -->
+            
+            <!-- div Slide -->
+            <!-- end div Slide -->
+            
+            
         </div>
-    </div>
-</div>
-<!-- end modal -->
-  
-  <script>
-    const modal = document.querySelector('.main-modal');
-    const closeButton = document.querySelectorAll('.modal-close');
-
-    const modalClose = () => {
-        modal.classList.remove('fadeIn');
-        modal.classList.add('fadeOut');
-        setTimeout(() => {
-            modal.style.display = 'none';
-        }, 500);
-    }
-
-    const openModal = () => {
-        modal.classList.remove('fadeOut');
-        modal.classList.add('fadeIn');
-        modal.style.display = 'flex';
-    }
-
-    for (let i = 0; i < closeButton.length; i++) {
-
-        const elements = closeButton[i];
-
-        elements.onclick = (e) => modalClose();
-
-        modal.style.display = 'none';
-
-        window.onclick = function (event) {
-            if (event.target == modal) modalClose();
-        }
-    }
-</script>
-    
+    </main>
 </body>
 </html>

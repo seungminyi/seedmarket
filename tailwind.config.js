@@ -7,11 +7,15 @@ module.exports = {
   theme: {
     extend: {
       left: {
-        '-full' : '-100%'
+        '-full': '-100%'
       },
       buttom: {
-        '-full' : '-100%'
+        '-full': '-100%'
       },
+      backgroundColor: theme => ({
+        ...theme('colors'),
+        'primary': '#e22215',
+      })
     },
     minWidth: {
       '1/4': '25%',

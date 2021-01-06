@@ -2,10 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-.left--full{
-    left: -100%;
+.left--full {
+  left: -100%;
 }
 
-.buttom--full{
-    bottom: -100%;
+.buttom--full {
+  bottom: -100%;
+}
+
+.red-custom {
+  background-color: #e22215;
 }
